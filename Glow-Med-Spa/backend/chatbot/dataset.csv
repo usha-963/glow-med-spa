@@ -1,0 +1,509 @@
+text,intent
+hello,greeting
+hi there,greeting
+good morning,greeting
+hey welcome,greeting
+how are you,greeting
+what services do you offer,services
+tell me about your services,services
+what treatments are available,services
+show me your treatments,services
+what can I get done here,services
+tell me about facial treatments,facial
+what is a facial,facial
+do you provide facials,facial
+how does a facial work,facial
+what happens during a facial,facial
+which facial treatments do you have,facial
+can I get a facial,facial
+what treatment is good for dry skin,dry_skin
+my skin is very dry,dry_skin
+what can help with dry skin,dry_skin
+do you have facials for dry skin,dry_skin
+my face feels dry,dry_skin
+how can I care for dry skin,dry_skin
+what about oily skin,oily_skin
+my skin is very oily,oily_skin
+what treatments help oily skin,oily_skin
+do you have facials for oily skin,oily_skin
+how can I manage oily skin,oily_skin
+my face gets oily quickly,oily_skin
+can you help with acne,acne
+what treatments are available for acne,acne
+I have acne concerns,acne
+how can I manage acne,acne
+do you offer acne facials,acne
+what about pimples,acne
+I have sensitive skin,sensitive_skin
+which treatments are suitable for sensitive skin,sensitive_skin
+my skin gets irritated easily,sensitive_skin
+can I get a facial with sensitive skin,sensitive_skin
+what should I know before treatment for sensitive skin,sensitive_skin
+what is skin rejuvenation,rejuvenation
+tell me about skin rejuvenation,rejuvenation
+how does skin rejuvenation work,rejuvenation
+do you offer skin rejuvenation,rejuvenation
+what treatments improve skin appearance,rejuvenation
+what is a beauty consultation,consultation
+can I speak to a skincare specialist,consultation
+how does consultation work,consultation
+do I need a consultation,consultation
+can I discuss my skin concerns,consultation
+how much does a facial cost,pricing
+what are your prices,pricing
+can you share the price list,pricing
+how much do treatments cost,pricing
+what is the consultation fee,pricing
+do you offer discounts,pricing
+what are your opening hours,hours
+when do you open,hours
+when do you close,hours
+are you open on Sunday,hours
+do you accept weekend appointments,hours
+where is your clinic located,location
+what is your address,location
+how can I reach your clinic,location
+where are you located,location
+do you have parking,location
+I want to book an appointment,booking
+how can I book a visit,booking
+can I schedule an appointment,booking
+I would like to visit,booking
+book a facial for me,booking
+how do I reserve a time,booking
+can I change my appointment,reschedule
+I want to reschedule my booking,reschedule
+how can I cancel my appointment,reschedule
+can I change my booking date,reschedule
+I need to move my appointment,reschedule
+can I speak to a real person,contact
+how can I contact the clinic,contact
+can someone call me,contact
+I want to talk to the receptionist,contact
+how can I reach your staff,contact
+thank you,thanks
+thanks for helping,thanks
+that was helpful,thanks
+great thank you,thanks
+I appreciate your help,thanks
+hey,greeting
+hello there,greeting
+hi,greeting
+good afternoon,greeting
+good evening,greeting
+is anyone there,greeting
+are you available,greeting
+hello team,greeting
+hey there,greeting
+how is your day,greeting
+I would like some information,greeting
+can you help me,greeting
+I have a question,greeting
+hiya,greeting
+good day,greeting
+what beauty services are available,services
+what can your med spa help with,services
+give me an overview of the treatments,services
+do you have a list of services,services
+what do you specialize in,services
+which beauty treatments can I choose from,services
+I want to know your treatment options,services
+what kind of skincare services do you provide,services
+can you explain the services you provide,services
+do you offer different skin treatments,services
+what are the available spa services,services
+I am looking for a beauty treatment,services
+tell me what I can book,services
+what options do you have for skincare,services
+can you show me the service menu,services
+what types of facials can I choose from,facial
+do you have a basic facial,facial
+can you explain your facial options,facial
+I want to know more about facials,facial
+is a facial part of your services,facial
+what is included in a facial session,facial
+how long does a facial appointment take,facial
+what should I expect at a facial,facial
+do you offer deep cleansing facials,facial
+can I ask about your facial menu,facial
+are facial treatments available for new clients,facial
+I am interested in getting a facial,facial
+what happens at my first facial visit,facial
+my skin feels tight and dry,dry_skin
+my cheeks are always dry,dry_skin
+do you have hydrating skin treatments,dry_skin
+which service may help with dryness,dry_skin
+I need information about dry skin treatments,dry_skin
+my face feels rough and flaky,dry_skin
+can I ask about hydration facials,dry_skin
+what options do you have for dehydrated skin,dry_skin
+I struggle with dry patches,dry_skin
+is there a facial focused on hydration,dry_skin
+my skin needs more moisture,dry_skin
+can a skincare consultation help with dryness,dry_skin
+I want to discuss my dry skin,dry_skin
+my forehead gets very oily,oily_skin
+I have an oily T zone,oily_skin
+do you have treatments for excess oil,oily_skin
+my skin looks shiny during the day,oily_skin
+what can I ask about oily skin,oily_skin
+I want to discuss my oily skin,oily_skin
+are there facial options for oily skin,oily_skin
+my nose gets oily quickly,oily_skin
+can a specialist discuss oil control with me,oily_skin
+what services address oily skin concerns,oily_skin
+I need advice about my oily skin,oily_skin
+my face feels greasy,oily_skin
+is there a consultation for oily skin,oily_skin
+I am looking for skincare for an oily face,oily_skin
+I get frequent breakouts,acne
+I have pimples on my face,acne
+can I discuss breakout concerns,acne
+do you have skincare consultations for acne,acne
+I want to ask about acne treatments,acne
+my skin has recurring blemishes,acne
+are there services for breakout-prone skin,acne
+I am concerned about spots and pimples,acne
+can someone explain your acne-related services,acne
+I would like to discuss my breakouts,acne
+what options can I ask a specialist about for acne,acne
+I have blemish concerns,acne
+can I book a consultation about acne,acne
+my face keeps breaking out,acne
+my skin reacts to many products,sensitive_skin
+I often get redness after skincare,sensitive_skin
+I am worried about skin irritation,sensitive_skin
+can I discuss my sensitive skin first,sensitive_skin
+do you offer a consultation for reactive skin,sensitive_skin
+my skin is easily irritated,sensitive_skin
+I need to mention my skin sensitivity,sensitive_skin
+which services can be discussed for delicate skin,sensitive_skin
+I want to be careful because my skin is sensitive,sensitive_skin
+can a specialist review my skin concerns,sensitive_skin
+I get redness easily,sensitive_skin
+I have a reaction-prone skin type,sensitive_skin
+should I tell you about my sensitivities before booking,sensitive_skin
+I need information before choosing a treatment,sensitive_skin
+can I ask about gentle treatment options,sensitive_skin
+I want to learn about skin renewal services,rejuvenation
+what are your skin refreshing treatments,rejuvenation
+I am interested in improving my skin's appearance,rejuvenation
+can you explain rejuvenation options,rejuvenation
+do you have treatments for refreshed-looking skin,rejuvenation
+tell me about your skin renewal services,rejuvenation
+what does a rejuvenation session involve,rejuvenation
+I want details about skin rejuvenation services,rejuvenation
+can I book to discuss skin renewal,rejuvenation
+what options are available for skin refreshment,rejuvenation
+I would like to know about rejuvenation treatments,rejuvenation
+do you provide appearance-focused skin treatments,rejuvenation
+can you tell me more about skin renewal,rejuvenation
+can I arrange a skincare consultation,consultation
+I want to talk with a skin specialist,consultation
+how can I get a beauty consultation,consultation
+can someone discuss my skincare goals,consultation
+I would like a consultation before treatment,consultation
+can I meet with a skincare professional,consultation
+I need help understanding the treatment options,consultation
+is it possible to discuss my skin first,consultation
+I want to ask a specialist some questions,consultation
+can I book a consultation session,consultation
+who can guide me through the services,consultation
+I would like to discuss my beauty goals,consultation
+can you help me arrange a consultation,consultation
+I have questions before choosing a treatment,consultation
+can I speak with someone about my skin,consultation
+can you tell me the cost of a treatment,pricing
+how much is the facial service,pricing
+where can I find your treatment rates,pricing
+I would like to know the service charges,pricing
+what is the cost for a consultation,pricing
+do you have a current price menu,pricing
+please tell me the facial pricing,pricing
+are treatment prices listed somewhere,pricing
+how much should I budget for a visit,pricing
+can I get details about the fees,pricing
+what do you charge for your services,pricing
+is there a pricing guide,pricing
+I need information about appointment costs,pricing
+can you explain your service pricing,pricing
+what time does the spa start business,hours
+what time are you available,hours
+are you open today,hours
+what days are you open,hours
+is the clinic open on Saturdays,hours
+can I visit in the evening,hours
+what is your weekly schedule,hours
+when can customers visit,hours
+are you open during holidays,hours
+please share your business hours,hours
+what time is the last appointment,hours
+do you work on weekdays,hours
+which days can I visit,hours
+can I book outside regular hours,hours
+what is your schedule this week,hours
+please share directions to the clinic,location
+how do I find your spa,location
+can you send your location,location
+what area is your clinic in,location
+is your clinic easy to reach,location
+where should I come for my appointment,location
+can you provide the clinic directions,location
+which neighborhood are you in,location
+how can I get to your spa,location
+please tell me where to visit,location
+is there a map to your clinic,location
+what is the nearest landmark,location
+can you share the full clinic address,location
+where is the spa situated,location
+how do I reach you in person,location
+can I make a reservation,booking
+I need an appointment slot,booking
+help me book a treatment,booking
+I would like to make a booking,booking
+is it possible to book online,booking
+can you arrange a visit for me,booking
+I want to schedule a facial,booking
+please help me reserve an appointment,booking
+how do I get an appointment,booking
+I am ready to book a session,booking
+can I book for this week,booking
+I need to set up a visit,booking
+where can I make an appointment,booking
+I want to reserve a consultation,booking
+I need to postpone my visit,reschedule
+can I move my booking to another day,reschedule
+please help me change my appointment time,reschedule
+I cannot attend my scheduled appointment,reschedule
+I want to cancel my reservation,reschedule
+how do I update my appointment,reschedule
+can my booking be moved,reschedule
+I need a different appointment date,reschedule
+I have to change my visit,reschedule
+is it possible to cancel a booking,reschedule
+please reschedule my facial,reschedule
+I booked the wrong date,reschedule
+can I pick another time for my appointment,reschedule
+I need to rearrange my appointment,reschedule
+what is the best way to reach your team,contact
+do you have a phone number,contact
+can I get the clinic contact details,contact
+how do I get in touch with someone,contact
+I need to speak with customer support,contact
+is there a receptionist I can contact,contact
+can your team get back to me,contact
+please connect me with a staff member,contact
+how can I message the clinic,contact
+I need help from a person,contact
+can I talk to someone at the spa,contact
+where can I find your contact information,contact
+I would like someone from the team to contact me,contact
+how do I reach customer service,contact
+can you transfer me to a staff member,contact
+thank you so much,thanks
+many thanks,thanks
+thanks a lot,thanks
+that answers my question,thanks
+I appreciate that,thanks
+you have been helpful,thanks
+thanks for the information,thanks
+perfect thank you,thanks
+okay thanks,thanks
+that is useful thank you,thanks
+I am grateful for your help,thanks
+great that helps,thanks
+thanks for explaining,thanks
+much appreciated,thanks
+cheers thank you,thanks
+
+"what can you do for my skin","services"
+"what beauty services are available","services"
+"what kind of treatments can I get","services"
+"do you have skincare services","services"
+"can you show me all your services","services"
+"i want to improve my skin","services"
+"i need a relaxing facial","facial"
+"what facial would you recommend","facial"
+"how long does a facial take","facial"
+"what is included in your facial","facial"
+"can i get a facial today","facial"
+"my skin feels rough and dry","dry_skin"
+"my face is getting flaky","dry_skin"
+"how do i moisturize my dry skin","dry_skin"
+"my skin lacks moisture","dry_skin"
+"my face becomes greasy","oily_skin"
+"how do i reduce excess oil","oily_skin"
+"my forehead is always oily","oily_skin"
+"i get pimples frequently","acne"
+"my acne is not going away","acne"
+"i have breakouts on my face","acne"
+"my skin reacts to products","sensitive_skin"
+"my face gets red easily","sensitive_skin"
+"i have easily irritated skin","sensitive_skin"
+"how can i get glowing skin","rejuvenation"
+"i want healthier looking skin","rejuvenation"
+"how can i improve my skin texture","rejuvenation"
+"can i talk to someone before treatment","consultation"
+"i need advice about my skin","consultation"
+"can someone help me choose a treatment","consultation"
+"tell me the cost of your treatments","pricing"
+"are your facials expensive","pricing"
+"what is the starting price","pricing"
+"how much money should i bring","pricing"
+"are you open today","hours"
+"what time does the spa start operating","hours"
+"are you open in the evening","hours"
+"please share your clinic address","location"
+"how do i get to your spa","location"
+"can you share the location","location"
+"i want to make a reservation","booking"
+"can i get an appointment this week","booking"
+"i need to schedule a facial","booking"
+"please change my appointment","reschedule"
+"i cannot come at my booked time","reschedule"
+"can i postpone my visit","reschedule"
+"give me your contact details","contact"
+"how do i reach someone from your team","contact"
+"please connect me with your staff","contact"
+"thanks for the information","thanks"
+"thank you for answering","thanks"
+"you helped me a lot","thanks"
+
+"i want to talk to a skincare expert","consultation"
+"can someone check my skin concerns","consultation"
+"i need professional skincare advice","consultation"
+"can i get guidance before choosing a facial","consultation"
+"i am confused about which treatment to choose","consultation"
+"who can help me understand my skin type","consultation"
+"can i meet your beauty specialist","consultation"
+"i want to discuss my skincare routine","consultation"
+"do you provide personal skincare guidance","consultation"
+"can someone explain which service suits me","consultation"
+"i would like to discuss my beauty goals","consultation"
+"can i ask a specialist some questions","consultation"
+"i need help selecting a beauty treatment","consultation"
+"how can i arrange a skincare discussion","consultation"
+"can i speak with someone before booking","consultation"
+
+"i want my skin to look younger","rejuvenation"
+"how can i improve my skin appearance","rejuvenation"
+"i want smoother looking skin","rejuvenation"
+"what helps improve skin texture","rejuvenation"
+"how can i get healthier looking skin","rejuvenation"
+"i want to refresh my skin","rejuvenation"
+"what treatments help with dull skin","rejuvenation"
+"how can i improve my skin glow","rejuvenation"
+"do you have treatments for uneven skin tone","rejuvenation"
+"i want to improve my overall complexion","rejuvenation"
+"what is the best way to refresh my face","rejuvenation"
+"can you tell me about skin renewal treatments","rejuvenation"
+"how do i make my skin look fresh","rejuvenation"
+"what services help with skin texture","rejuvenation"
+"i am interested in improving my skin quality","rejuvenation"
+
+"my skin becomes red very easily","sensitive_skin"
+"most skincare products irritate my face","sensitive_skin"
+"my face feels itchy after using products","sensitive_skin"
+"my skin reacts badly to new creams","sensitive_skin"
+"i have delicate facial skin","sensitive_skin"
+"my face gets irritated after washing","sensitive_skin"
+"can i get a gentle facial for sensitive skin","sensitive_skin"
+"my skin is easily affected by skincare products","sensitive_skin"
+"i experience redness on my face","sensitive_skin"
+"my face burns when i apply certain products","sensitive_skin"
+"what should i avoid with sensitive skin","sensitive_skin"
+"my skin gets uncomfortable after applying cream","sensitive_skin"
+"i need skincare options for easily irritated skin","sensitive_skin"
+"my face is very reactive","sensitive_skin"
+"which facial is gentle on the skin","sensitive_skin"
+
+"can you tell me where your spa is","location"
+"please send me the clinic location","location"
+"i need directions to your clinic","location"
+"how can i find your beauty clinic","location"
+"can you share a map location","location"
+"what area is your clinic in","location"
+"which city is your spa located in","location"
+"how far is your clinic","location"
+"can you send me directions","location"
+"where should i come for my appointment","location"
+"please share your full clinic address","location"
+"is your spa easy to find","location"
+"do you have a google maps location","location"
+"what is the nearest landmark to your clinic","location"
+"where can i visit you","location"
+
+"i want to speak with your team","contact"
+"can someone from the spa help me","contact"
+"how do i get in touch with you","contact"
+"i need to contact the receptionist","contact"
+"can you connect me to a staff member","contact"
+"i want someone to call me back","contact"
+"where can i send my enquiry","contact"
+"how can i reach customer support","contact"
+"can i talk to your customer service team","contact"
+"please let me speak to someone","contact"
+"i have a question for your staff","contact"
+"how do i contact the beauty team","contact"
+
+"how much should i pay for a treatment","pricing"
+"what is the fee for a facial","pricing"
+"can you tell me the treatment charges","pricing"
+"how expensive are your services","pricing"
+"what is the cost of skin rejuvenation","pricing"
+"do you have an affordable facial","pricing"
+"what is the consultation charge","pricing"
+"can i know your service rates","pricing"
+"how much will my visit cost","pricing"
+"do you have a package price","pricing"
+"are there any special offers","pricing"
+"what is the price range for treatments","pricing"
+"how much do i need to spend","pricing"
+"can you send me the treatment price details","pricing"
+"where can i see your rates","pricing"
+"What treatments are available at your spa?",services
+"What beauty services can I choose from?",services
+"Tell me about the treatments you provide",services
+"What can I get done at your spa?",services
+"Show me your list of services",services
+"What are the available beauty options?",services
+"Can you explain your spa services?",services
+"What kind of treatments do you offer?",services
+"Do you have different beauty packages?",services
+"I want to know all your available services",services
+"What does your spa specialize in?",services
+"Can you share your service list?",services
+"What options are available for skincare?",services
+"Which beauty treatments can I book?",services
+"Give me an overview of your spa treatments",services
+"I want to schedule a spa appointment",booking
+"Can I reserve a slot for a facial?",booking
+"I would like to visit your spa",booking
+"How do I make an appointment?",booking
+"Please arrange a beauty consultation for me",booking
+"I need to book a treatment",booking
+"Can you schedule a visit for me?",booking
+"I want to fix an appointment",booking
+"Is it possible to book a session?",booking
+"Help me reserve an appointment",booking
+"I would like to come in for skincare",booking
+"Can I book a slot for tomorrow?",booking
+"Please book a facial session for me",booking
+"I am interested in scheduling a treatment",booking
+"How can I reserve my spa visit?",booking
+"What time does your spa open?",hours
+"When do you close for the day?",hours
+"Tell me your working hours",hours
+"Are you open in the morning?",hours
+"Do you operate on weekends?",hours
+"What are your business timings?",hours
+"Until what time can I visit?",hours
+"When does your spa start operating?",hours
+"Are you available in the evening?",hours
+"What time do you stop accepting visitors?",hours
+"Is your spa open on Sundays?",hours
+"Can you tell me your opening and closing time?",hours
+"Do you work on Saturdays?",hours
+"What are your weekday timings?",hours
+"At what time do you shut down?",hours
+

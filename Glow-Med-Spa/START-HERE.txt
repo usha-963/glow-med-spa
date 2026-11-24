@@ -1,0 +1,25 @@
+GLOW MED SPA — FREE CHATBOT DEMO
+
+This project uses React + Vite, Flask and SQLite. The chatbot answers typed customer questions using a local FAQ knowledge base and phrase/keyword matching. It does not call Gemini, OpenAI, or any paid AI API. There is no API key or AI usage bill.
+
+Run the backend:
+1. Open a terminal in the backend folder.
+2. Create and activate a virtual environment (see README.md).
+3. Run: pip install -r requirements.txt
+4. Run: python app.py
+
+Run the frontend in a second terminal:
+1. Open a terminal in the frontend folder.
+2. Run: npm install
+3. Run: npm run dev
+4. Open the local URL shown by Vite (usually http://localhost:5173).
+
+Try asking the chatbot questions in your own words, such as:
+- What treatments do you offer?
+- How much does a facial cost?
+- What happens during a consultation?
+- Do you offer Botox?
+- Are you open on Saturdays?
+- I have sensitive skin. What should I know?
+
+No API key or paid chatbot subscription is required. The chatbot is not generative AI and cannot answer every possible question. Configure verified clinic details before a real client launch.

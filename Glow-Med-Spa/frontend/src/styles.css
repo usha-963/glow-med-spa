@@ -1,0 +1,3877 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #342b25;
+  background: #fffdfa;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --cream: #f8f3ed;
+  --cream-deep: #efe5d9;
+  --gold: #b18b53;
+  --gold-dark: #8c6738;
+  --purple: #42182b;
+  --ink: #342b25;
+  --muted: #746b63;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6.5%;
+  background: rgba(255,253,250,.96);
+  border-bottom: 1px solid #eee5da;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  color: var(--ink);
+}
+
+.brand b {
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #f1e7d8;
+  color: var(--gold-dark);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 13px;
+  color: #61574f;
+}
+
+.nav-links a:hover {
+  color: var(--gold-dark);
+}
+
+.mobile-menu {
+  display: none;
+  border: 0;
+  background: none;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border: 1px solid var(--gold);
+  border-radius: 3px;
+  color: white;
+  background: var(--gold-dark);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: .02em;
+  transition: .2s;
+}
+
+.btn:hover {
+  background: #6f512e;
+  transform: translateY(-1px);
+}
+
+.btn-small {
+  padding: 11px 16px;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  min-height: 610px;
+  background-size: cover;
+  background-position: center 48%;
+  display: flex;
+  align-items: center;
+  padding: 70px 10%;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 510px;
+  color: #fff;
+  text-shadow: 0 2px 18px rgba(0,0,0,.25);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold-dark);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .18em;
+}
+
+.hero .eyebrow {
+  color: #fff3dd;
+}
+
+.hero h1 {
+  margin: 20px 0 14px;
+  font: 600 clamp(46px,6vw,76px)/1.04 'Playfair Display',serif;
+  letter-spacing: -.035em;
+}
+
+.hero h1 em {
+  color: #f1d7a9;
+  font-weight: 500;
+}
+
+.hero-content p {
+  font-size: 15px;
+  letter-spacing: .04em;
+  margin: 0 0 28px;
+}
+
+.hero-caption {
+  position: absolute;
+  right: 6%;
+  bottom: 28px;
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: .08em;
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+  padding: 92px 7% 100px;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 46px;
+}
+
+.section-heading h2,
+.about-copy h2,
+.booking-cta h2 {
+  font: 600 clamp(32px,4vw,44px)/1.15 'Playfair Display',serif;
+  margin: 13px 0;
+  color: var(--ink);
+}
+
+.section-heading p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ================= SERVICES ================= */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 26px;
+  max-width: 1180px;
+  margin: auto;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #eee5db;
+  box-shadow: 0 12px 35px rgba(65,45,25,.045);
+}
+
+.service-image-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 260px;
+  background: var(--cream);
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .5s;
+}
+
+.service-card:hover .service-image {
+  transform: scale(1.04);
+}
+
+.service-number {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  background: rgba(255,253,250,.92);
+  color: var(--gold-dark);
+  padding: 7px 10px;
+  font-size: 11px;
+  letter-spacing: .1em;
+}
+
+.service-copy {
+  padding: 24px 24px 26px;
+}
+
+.service-copy h3 {
+  font: 600 23px 'Playfair Display',serif;
+  margin: 0 0 12px;
+  color: var(--gold-dark);
+}
+
+.service-copy p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--muted);
+  min-height: 70px;
+  margin: 0 0 16px;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  background: none;
+  padding: 0;
+  color: #805B2B;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.text-link:hover {
+  color: var(--gold-dark);
+}
+
+/* ================= ABOUT ================= */
+
+.about-section {
+  display: grid;
+  grid-template-columns: 70px 1.2fr 1fr;
+  gap: 35px;
+  align-items: center;
+  padding: 80px 10%;
+  background: var(--cream);
+}
+
+.about-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #efe5d9;
+  color: #805B2B;
+}
+
+.about-copy h2 {
+  font-size: 37px;
+  max-width: 440px;
+}
+
+.about-copy p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 470px;
+}
+
+.about-points {
+  display: grid;
+  gap: 22px;
+}
+
+.about-points div {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: var(--gold-dark);
+}
+
+.about-points span {
+  display: grid;
+  gap: 5px;
+  color: var(--ink);
+}
+
+.about-points b {
+  font-size: 13px;
+}
+
+.about-points small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* ================= BOOKING CTA ================= */
+
+.booking-cta {
+  text-align: center;
+  padding: 85px 20px;
+  background: linear-gradient(125deg,#321321 0%,#4A1D30 55%,#642B3E 100%);
+  color: white;
+}
+
+.booking-cta .eyebrow {
+  color: #f0d9b0;
+}
+
+.booking-cta h2 {
+  color: white;
+}
+
+.booking-cta p {
+  color: #F0E3D5;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.btn-light {
+  background: #f7efe4;
+  color: #684e31;
+  border-color: #f7efe4;
+}
+
+.btn-light:hover {
+  background: white;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  background: #241019;
+  color: #eee5dc;
+  padding: 55px 8% 20px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 35px;
+  padding-bottom: 40px;
+}
+
+.footer-brand {
+  color: white;
+}
+
+.footer-main p,
+.footer-main a:not(.brand),
+.footer-main span {
+  color: #c9bdb2;
+  font-size: 12px;
+}
+
+.footer-main h4 {
+  font-size: 12px;
+  color: #E7C98F;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.footer-main > div:nth-child(2),
+.footer-main > div:nth-child(3) {
+  display: grid;
+  align-content: start;
+  gap: 11px;
+}
+
+.footer-main span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #514741;
+  padding-top: 18px;
+  text-align: center;
+  color: #b7aaa0;
+  font-size: 10px;
+}
+
+/* ================= BOOKING MODAL ================= */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(24,12,17,.62);
+}
+
+.modal-card {
+  width: min(100%,560px);
+  max-height: 92vh;
+  overflow: auto;
+  background: #fffdfa;
+  padding: 34px;
+  position: relative;
+  box-shadow: 0 25px 80px rgba(0,0,0,.2);
+}
+
+.modal-close {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  border: 0;
+  background: none;
+  color: var(--muted);
+}
+
+.modal-card h2 {
+  font: 600 34px 'Playfair Display',serif;
+  margin: 12px 0 6px;
+}
+
+.modal-intro {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+.booking-form {
+  display: grid;
+  gap: 14px;
+}
+
+.booking-form label {
+  display: grid;
+  gap: 6px;
+  color: #5c5046;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #e4d9cc;
+  background: white;
+  color: var(--ink);
+  outline-color: var(--gold);
+  font-size: 13px;
+  border-radius: 2px;
+}
+
+.form-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.small-note {
+  color: #8b8178;
+  font-size: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.form-error {
+  color: #a33c32;
+  font-size: 12px;
+}
+
+.success-state {
+  text-align: center;
+  padding: 30px 5px;
+}
+
+.success-state svg {
+  color: #6b8b64;
+}
+
+.success-state p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ================= CHATBOT ================= */
+
+.chat-launcher {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  border-radius: 30px;
+  padding: 15px 20px;
+  color: white;
+  background: var(--purple);
+  box-shadow: 0 8px 28px rgba(55,38,66,.25);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.chat-launcher:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(55,38,66,.3);
+}
+
+.chat-launcher span {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.chat-window {
+  position: fixed;
+  right: 24px;
+  bottom: 91px;
+  width: min(410px,calc(100vw - 32px));
+  height: min(680px,calc(100vh - 110px));
+  z-index: 50;
+  background: #fffdfa;
+  border: 1px solid #e9dfd5;
+  border-radius: 16px;
+  box-shadow: 0 18px 60px rgba(0,0,0,.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Chat header */
+
+.chat-head {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 16px;
+  flex: 0 0 auto;
+  color: white;
+  background: linear-gradient(120deg,#5e4a6e,#806887);
+}
+
+.chat-avatar {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.16);
+}
+
+.chat-head-copy {
+  display: grid;
+  gap: 4px;
+  flex: 1;
+}
+
+.chat-head b {
+  font-family: 'Playfair Display',serif;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.chat-head span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #F0E3D5;
+}
+
+.chat-online-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #a9d5a0;
+  display: inline-block;
+}
+
+.chat-head button {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,.12);
+  color: white;
+}
+
+/* Conversation area */
+
+.chat-messages {
+  padding: 18px 15px;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  background: linear-gradient(180deg,#fffdfa,#fcf8f3);
+  scroll-behavior: smooth;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 5px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #C6A36A;
+  border-radius: 10px;
+}
+
+.chat-bubble {
+  max-width: 88%;
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+  padding: 12px 15px;
+  font-size: 14px;
+  line-height: 1.7;
+  border-radius: 14px;
+}
+
+.chat-bubble.bot {
+  align-self: flex-start;
+  background: #f3eadf;
+  color: #49313A;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-bubble.user {
+  align-self: flex-end;
+  background: #eee1ca;
+  color: #4c3926;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-typing {
+  opacity: .75;
+  font-style: italic;
+}
+
+.typing-dots {
+  display: inline-block;
+  animation: typingPulse 1s infinite;
+}
+
+@keyframes typingPulse {
+  0%, 100% { opacity: .3; }
+  50% { opacity: 1; }
+}
+
+/* Compact horizontal suggested questions */
+
+.quick-replies {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  border-top: 1px solid #f0e8df;
+  background: #fffdfa;
+}
+
+.quick-replies::-webkit-scrollbar {
+  display: none;
+}
+
+.chat-suggestion-label {
+  display: none;
+}
+
+.quick-replies button {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  border: 1px solid #D8C39E;
+  border-radius: 22px;
+  background: white;
+  color: #805B2B;
+  padding: 8px 13px;
+  font-size: 11px;
+  font-weight: 600;
+  transition: background .2s;
+}
+
+.quick-replies button:hover:not(:disabled) {
+  background: #F5EFE5;
+}
+
+.quick-replies button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+/* Input area */
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  border: 1px solid #e9dfd5;
+  border-radius: 28px;
+  margin: 5px 12px 10px;
+  padding: 5px 6px 5px 15px;
+  gap: 8px;
+  background: white;
+}
+
+.chat-input input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 14px;
+  color: var(--ink);
+  padding: 9px 0;
+}
+
+.chat-input input::placeholder {
+  color: #9a9088;
+}
+
+.chat-input button {
+  display: grid;
+  place-items: center;
+  flex: 0 0 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  color: white;
+  background: var(--gold-dark);
+}
+
+.chat-input button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+/* Booking and reset buttons */
+
+.chat-footer-actions {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.chat-book {
+  flex: 1;
+  border: 0;
+  border-radius: 7px;
+  background: #F1E7D8;
+  color: #805B2B;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.chat-book:hover:not(:disabled) {
+  background: #E9DFD1;
+}
+
+.chat-book:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.chat-reset {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #E4D8C6;
+  border-radius: 7px;
+  background: white;
+  color: #805B2B;
+}
+
+.chat-disclaimer {
+  flex: 0 0 auto;
+  margin: 9px 10px 10px;
+  color: #91877e;
+  font-size: 10px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 0 5%;
+    height: 68px;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    padding: 22px;
+    background: #fffdfa;
+    border-bottom: 1px solid #eee5da;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 570px;
+    padding: 55px 7%;
+    background-position: 58% center;
+  }
+
+  .hero-content {
+    max-width: 390px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+
+  .service-image-wrap {
+    height: 280px;
+  }
+
+  .service-copy p {
+    min-height: 0;
+  }
+
+  .about-section {
+    grid-template-columns: 1fr;
+    padding: 60px 8%;
+    gap: 20px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .section {
+    padding: 65px 6%;
+  }
+
+  .form-two {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-card {
+    padding: 28px 20px;
+  }
+
+  .chat-window {
+    right: 10px;
+    bottom: 76px;
+    width: calc(100vw - 20px);
+    height: min(680px,calc(100dvh - 90px));
+    border-radius: 15px;
+  }
+
+  .chat-launcher {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .chat-messages {
+    padding: 14px 12px;
+  }
+
+  .chat-bubble {
+    font-size: 13px;
+    max-width: 92%;
+  }
+
+  .quick-replies {
+    padding: 8px 10px;
+  }
+
+  .chat-input {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* =========================================================
+  GLOW MED SPA — REFERENCE-INSPIRED LUXURY FINISH
+  Layered champagne frames, botanical watermarking & twinkles
+  ========================================================= */
+:root {
+  --glow-emerald: #073f32;
+  --glow-emerald-deep: #062f27;
+  --glow-champagne: #c7a36a;
+  --glow-champagne-light: #ead7b4;
+  --glow-alabaster: #f7f2e9;
+  --glow-burgundy: #2b101d;
+}
+
+/* A warm, subtly textured canvas rather than flat white */
+body {
+  background-color: var(--glow-alabaster);
+  background-image:
+    radial-gradient(ellipse at 12% 18%, rgba(199,163,106,.075), transparent 28%),
+    radial-gradient(ellipse at 88% 72%, rgba(7,63,50,.045), transparent 30%);
+}
+
+/* HERO: left emerald editorial panel + full reception image on right */
+.hero {
+  min-height: 610px;
+  padding: 0 7%;
+  align-items: stretch;
+  background-size: cover;
+  background-position: center;
+  isolation: isolate;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0 auto 0 0;
+  width: min(39%, 530px);
+  background:
+    radial-gradient(circle at 18% 78%, rgba(234,215,180,.14) 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 22%, rgba(234,215,180,.22) 0 1px, transparent 2px),
+    radial-gradient(circle at 42% 58%, rgba(234,215,180,.16) 0 1.5px, transparent 2.5px),
+    linear-gradient(145deg, rgba(5,49,39,.98), rgba(7,63,50,.94));
+  box-shadow: 24px 0 55px rgba(25,24,17,.13);
+}
+.hero::after {
+  content: "✦";
+  position: absolute;
+  z-index: 0;
+  left: 27%;
+  bottom: 12%;
+  color: rgba(234,215,180,.8);
+  font-size: 25px;
+  text-shadow: 0 0 10px rgba(234,215,180,.85), 0 0 28px rgba(234,215,180,.6);
+  pointer-events: none;
+  animation: glowTwinkle 3.8s ease-in-out infinite;
+}
+.hero-content {
+  width: min(39%, 460px);
+  max-width: 440px;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  padding: 54px 34px 54px 0;
+  text-shadow: 0 2px 18px rgba(0,0,0,.24);
+}
+.hero-content::before,
+.hero-content::after {
+  content: "✧";
+  position: absolute;
+  color: var(--glow-champagne-light);
+  pointer-events: none;
+  text-shadow: 0 0 9px rgba(234,215,180,.9), 0 0 22px rgba(234,215,180,.55);
+  animation: glowTwinkle 3.2s ease-in-out infinite;
+}
+.hero-content::before { left: -24px; top: 20%; font-size: 18px; }
+.hero-content::after { right: 13%; bottom: 19%; font-size: 13px; animation-delay: 1.4s; }
+.hero .eyebrow { color: #ead7b4; }
+.hero h1 { font-size: clamp(42px, 5.1vw, 68px); }
+.hero h1 em { color: #e6c58e; }
+.hero-caption {
+  right: 5%;
+  bottom: 22px;
+  z-index: 2;
+  color: #fff8ec;
+  text-shadow: 0 1px 8px rgba(0,0,0,.5);
+}
+
+/* Floating gold dust — subtle, slow and decorative */
+@keyframes glowTwinkle {
+  0%, 100% { opacity: .38; transform: scale(.82) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.18) rotate(18deg); }
+}
+@keyframes glowDrift {
+  0%, 100% { background-position: 0 0, 30px 45px, 80px 10px; }
+  50% { background-position: 8px -14px, 18px 32px, 92px 22px; }
+}
+
+/* Section headings gain fine gold ornamental rules */
+.section-heading { position: relative; }
+.section-heading::after {
+  content: "✧  ─────────  ✧";
+  display: block;
+  margin: 17px auto 0;
+  color: var(--glow-champagne);
+  font: 11px 'DM Sans', sans-serif;
+  letter-spacing: .2em;
+}
+
+/* Treatment cards: layered, slightly offset double champagne frames */
+.service-grid { gap: 32px; }
+.service-card {
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  border: 1px solid rgba(199,163,106,.85);
+  border-radius: 5px;
+  background: #fbf8f1;
+  box-shadow: 0 13px 28px rgba(55,39,20,.10);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.service-card > * {
+  position: relative;
+  z-index: 1;
+}
+.service-card::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 7px -7px -7px 7px;
+  border: 1px solid rgba(177,139,83,.72);
+  border-radius: 4px;
+  transform: rotate(.65deg);
+  transition: transform .3s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 38px rgba(55,39,20,.16);
+}
+.service-card:hover::before { transform: rotate(0deg) translate(2px,2px); }
+.service-image-wrap {
+  height: 245px;
+  overflow: hidden;
+  border: 6px solid #f7f1e6;
+  outline: 1px solid rgba(199,163,106,.85);
+  outline-offset: -7px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.7);
+}
+.service-image { filter: saturate(.94) contrast(1.02); }
+.service-number {
+  z-index: 2;
+  left: 13px;
+  top: 13px;
+  border: 1px solid var(--glow-champagne);
+  background: rgba(250,246,237,.96);
+  color: #78572c;
+  box-shadow: 0 3px 9px rgba(0,0,0,.12);
+}
+.service-copy { padding: 20px 21px 23px; }
+.service-copy h3 { color: var(--glow-emerald); }
+
+/* Botanical watermark panels, using inline SVG line art as a repeating background */
+.about-section {
+  position: relative;
+  overflow: hidden;
+  background-color: #f3eee4;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='300' viewBox='0 0 360 300'%3E%3Cg fill='none' stroke='%23b6a17d' stroke-opacity='.19' stroke-width='1.2'%3E%3Cpath d='M18 286C94 222 115 150 126 22M63 250C38 206 29 176 30 142M87 218C130 195 151 162 164 125M106 180C72 160 61 129 60 99M126 140C167 120 189 91 202 54M126 140C103 105 101 78 109 51M205 287C246 226 265 165 273 76M233 238C204 212 191 184 190 154M249 205C285 182 304 150 310 116'/%3E%3Cpath d='M30 142C9 111 13 88 34 72C49 98 49 121 30 142ZM60 99C39 75 43 52 65 39C78 63 76 82 60 99ZM164 125C155 94 169 73 197 67C196 96 184 114 164 125ZM109 51C89 28 97 9 122 2C129 25 124 41 109 51ZM190 154C170 129 176 106 202 93C210 121 205 139 190 154ZM273 76C255 49 266 26 294 19C297 47 289 64 273 76ZM310 116C300 86 315 66 343 65C340 92 329 108 310 116Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 390px auto;
+}
+.about-section::after {
+  content: "✧";
+  position: absolute;
+  right: 7%;
+  top: 15%;
+  color: rgba(177,139,83,.58);
+  font-size: 32px;
+  text-shadow: 0 0 12px rgba(199,163,106,.5);
+  animation: glowTwinkle 4.2s ease-in-out infinite;
+  pointer-events: none;
+}
+.about-icon { color: var(--glow-champagne); }
+
+/* Burgundy CTA/footer with a few soft glints */
+.booking-cta {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 28%, rgba(234,215,180,.24) 0 1px, transparent 2px),
+    radial-gradient(circle at 83% 65%, rgba(234,215,180,.2) 0 1px, transparent 2px),
+    linear-gradient(115deg, #260d19, #3b1728 58%, #260d19);
+}
+.booking-cta::after {
+  content: "✦";
+  position: absolute;
+  right: 9%;
+  bottom: 10%;
+  color: rgba(234,215,180,.7);
+  font-size: 42px;
+  text-shadow: 0 0 15px rgba(234,215,180,.55);
+  animation: glowTwinkle 4s ease-in-out infinite;
+  pointer-events: none;
+}
+.footer {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 92% 16%, rgba(234,215,180,.18) 0 1px, transparent 2px),
+    radial-gradient(circle at 78% 75%, rgba(234,215,180,.13) 0 1px, transparent 2px),
+    linear-gradient(135deg, #210c17, #321322 65%, #210c17);
+}
+.footer::after {
+  content: "✧";
+  position: absolute;
+  right: 5%;
+  top: 13%;
+  color: rgba(234,215,180,.45);
+  font-size: 38px;
+  animation: glowTwinkle 4.6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+
+/* Extra luxury details: warm frame, soft lift and small glints */
+.service-card::after {
+  content: "✧";
+  position: absolute;
+  z-index: 2;
+  right: 13px;
+  top: 12px;
+  color: rgba(199,163,106,.95);
+  font-size: 17px;
+  text-shadow: 0 0 10px rgba(234,215,180,.85);
+  pointer-events: none;
+}
+.service-copy {
+  background: linear-gradient(180deg, #fffdf9 0%, #f8f1e7 100%);
+}
+.service-copy p {
+  color: #71675e;
+}
+
+/* Admin dashboard: subtle shared brand detailing */
+.glow-sidebar {
+  background: linear-gradient(160deg, #073f32 0%, #052f27 100%) !important;
+  border-right: 1px solid rgba(199,163,106,.55) !important;
+}
+.glow-heading { color: var(--glow-emerald) !important; }
+.glow-main {
+  background-color: #f7f2e9 !important;
+  background-image: radial-gradient(ellipse at 95% 4%, rgba(199,163,106,.09), transparent 27%) !important;
+}
+.glow-panel {
+  border: 1px solid rgba(199,163,106,.52) !important;
+  box-shadow: 0 12px 30px rgba(49,35,19,.055) !important;
+}
+.stat-card {
+  border: 1px solid rgba(199,163,106,.72) !important;
+  box-shadow: 0 8px 20px rgba(49,35,19,.07), inset 0 1px 0 rgba(255,255,255,.8) !important;
+  transition: transform .25s ease, box-shadow .25s ease !important;
+}
+.stat-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 15px 28px rgba(49,35,19,.12) !important;
+}
+.status-select { font-weight: 600 !important; }
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+}
+
+/* Responsive hero: return to a full-width overlay on smaller screens */
+@media (max-width: 760px) {
+  .hero { min-height: 570px; padding: 0 7%; background-position: 58% center; }
+  .hero::before { width: 78%; }
+  .hero-content { width: 78%; min-height: 570px; padding-right: 15px; }
+  .hero h1 { font-size: clamp(40px, 11vw, 58px); }
+  .hero-caption { right: 6%; bottom: 15px; font-size: 9px; }
+  .service-grid { gap: 24px; }
+  .service-card::before { inset: 5px -4px -5px 4px; }
+}
+@media (max-width: 560px) {
+  .service-grid { grid-template-columns: 1fr; }
+  .service-image-wrap { height: 230px; }
+}
+
+
+/* =========================================================
+  GLOW MED SPA — REFINED COLOUR & SOFTER FINISH
+  1. Colour-rich booking modal
+  2. Translucent emerald hero panel
+  3. Blended CTA and footer backgrounds
+  4. Softer service cards and warmer page surfaces
+  ========================================================= */
+
+:root {
+  --glow-emerald: #0b4b3d;
+  --glow-emerald-deep: #07382f;
+  --glow-champagne: #c6a16b;
+  --glow-champagne-light: #ead7b4;
+  --glow-alabaster: #f6f1e8;
+  --glow-burgundy: #321725;
+  --glow-sage: #e8eee7;
+  --glow-lilac: #eee8ef;
+}
+
+/* A slightly fresher, softer page background */
+body {
+  background-color: #f6f2eb;
+  background-image:
+    radial-gradient(ellipse at 8% 12%, rgba(198,161,107,.10), transparent 30%),
+    radial-gradient(ellipse at 92% 48%, rgba(11,75,61,.055), transparent 32%),
+    linear-gradient(180deg, #faf7f1 0%, #f3f0e9 100%);
+}
+
+/* 1 — Booking form: coordinated cream, sage and champagne tones */
+.modal-backdrop {
+  background: rgba(25, 22, 27, .54);
+  backdrop-filter: blur(5px);
+}
+
+.modal-card {
+  background: linear-gradient(145deg, #fffdf9 0%, #f4f0e8 100%);
+  border: 1px solid rgba(198,161,107,.75);
+  border-radius: 18px;
+  box-shadow: 0 28px 90px rgba(24, 37, 31, .28);
+  scrollbar-color: #b99a6a #eee8dd;
+}
+
+.modal-card h2 {
+  color: #0b4b3d;
+}
+
+.modal-card .eyebrow {
+  color: #98703d;
+}
+
+.modal-intro {
+  color: #71685f;
+}
+
+.booking-form label {
+  color: #3f5149;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  background: rgba(255,255,255,.82);
+  border: 1px solid #d9c9ad;
+  border-radius: 8px;
+  transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  border-color: #a98754;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(198,161,107,.16);
+}
+
+.booking-form button[type="submit"],
+.booking-form .btn {
+  border-radius: 8px;
+  background: linear-gradient(110deg, #8f693b, #b18a53);
+  border-color: #b18a53;
+}
+
+.modal-close {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #eee8dd;
+  color: #5b5148;
+}
+
+.modal-close:hover {
+  background: #e5dac8;
+  color: #0b4b3d;
+}
+
+/* 2 — Let the reception photo show gently through the emerald panel */
+.hero::before {
+  background:
+    radial-gradient(circle at 18% 78%, rgba(234,215,180,.17) 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 22%, rgba(234,215,180,.22) 0 1px, transparent 2px),
+    radial-gradient(circle at 42% 58%, rgba(234,215,180,.14) 0 1.5px, transparent 2.5px),
+    linear-gradient(145deg, rgba(5,49,39,.82), rgba(7,63,50,.76));
+  backdrop-filter: blur(1.5px);
+  box-shadow: 18px 0 48px rgba(25,24,17,.10);
+}
+
+/* 3 — Make the CTA flow into the footer instead of looking like two blocks */
+.booking-cta {
+  background:
+    radial-gradient(circle at 8% 28%, rgba(234,215,180,.17) 0 1px, transparent 2px),
+    radial-gradient(circle at 83% 65%, rgba(234,215,180,.14) 0 1px, transparent 2px),
+    linear-gradient(180deg, #321725 0%, #2d1421 100%);
+  padding-bottom: 78px;
+}
+
+.footer {
+  margin-top: -1px;
+  background:
+    radial-gradient(circle at 92% 16%, rgba(234,215,180,.15) 0 1px, transparent 2px),
+    radial-gradient(circle at 78% 75%, rgba(234,215,180,.11) 0 1px, transparent 2px),
+    linear-gradient(180deg, #2d1421 0%, #24111c 100%);
+}
+
+/* 4 — Softer service-card corners and gentler section colours */
+.section {
+  background: linear-gradient(180deg, #f8f5ee 0%, #f1f2ec 100%);
+}
+
+.service-grid {
+  gap: 30px;
+}
+
+.service-card {
+  overflow: visible;
+  border: 1px solid rgba(190,158,111,.62);
+  border-radius: 18px;
+  background: #fbfaf6;
+  box-shadow: 0 14px 34px rgba(45,57,47,.09);
+}
+
+.service-card::before {
+  border-radius: 18px;
+  inset: 6px -6px -6px 6px;
+  border-color: rgba(190,158,111,.48);
+}
+
+.service-card::after {
+  top: 17px;
+  right: 17px;
+}
+
+.service-image-wrap {
+  height: 245px;
+  border: 5px solid #f8f4eb;
+  border-radius: 14px 14px 5px 5px;
+  outline: 1px solid rgba(190,158,111,.58);
+  outline-offset: -6px;
+  overflow: hidden;
+}
+
+.service-image {
+  border-radius: 8px 8px 2px 2px;
+}
+
+.service-copy {
+  border-radius: 0 0 17px 17px;
+  background: linear-gradient(145deg, #fbfaf6 0%, #f0f3ed 100%);
+  padding: 23px 23px 25px;
+}
+
+.service-copy h3 {
+  color: #0b4b3d;
+}
+
+.service-copy p {
+  color: #716b63;
+}
+
+/* Keep the decorative frame aligned with the softer corners on mobile */
+@media (max-width: 760px) {
+  .hero::before {
+    background:
+      radial-gradient(circle at 18% 78%, rgba(234,215,180,.17) 0 1px, transparent 2px),
+      linear-gradient(145deg, rgba(5,49,39,.84), rgba(7,63,50,.78));
+  }
+
+  .service-card::before {
+    inset: 5px -4px -5px 4px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 560px) {
+  .modal-card {
+    border-radius: 14px;
+    padding: 28px 20px;
+  }
+
+  .service-card {
+    border-radius: 16px;
+  }
+
+  .service-image-wrap {
+    border-radius: 12px 12px 4px 4px;
+  }
+
+  .service-copy {
+    border-radius: 0 0 15px 15px;
+  }
+}
+
+/* =========================================================
+  GLOW MED SPA — REFERENCE MATCH: ARCHES, EMERALD & CHAMPAGNE
+  Final overrides: hero buttons, curved details, treatment cards,
+  booking/enquiry surfaces and contact/footer palette.
+  ========================================================= */
+
+:root {
+  --glow-emerald: #0b493b;
+  --glow-emerald-deep: #062f27;
+  --glow-emerald-soft: #dfeae2;
+  --glow-champagne: #c6a16b;
+  --glow-champagne-light: #ead7b4;
+  --glow-alabaster: #f7f2e9;
+  --glow-burgundy: #321725;
+}
+
+/* Warm alabaster canvas with a gentle sage wash between sections */
+body {
+  background: #f7f2e9;
+}
+
+/* Hero panel: softened lower-right curve, like the arched reception image */
+.hero {
+  background-color: #e8dfd1;
+  background-position: center center;
+}
+
+.hero::before {
+  width: min(43%, 590px);
+  border-radius: 0 0 170px 0;
+  background:
+    radial-gradient(ellipse at 84% 12%, rgba(234,215,180,.12), transparent 32%),
+    radial-gradient(circle at 18% 78%, rgba(234,215,180,.20) 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 22%, rgba(234,215,180,.24) 0 1px, transparent 2px),
+    linear-gradient(145deg, rgba(5,49,39,.78), rgba(7,63,50,.72));
+  backdrop-filter: blur(1px);
+}
+
+/* Subtle arch outlines over the reception image */
+.hero {
+  isolation: isolate;
+}
+.hero-content {
+  width: min(43%, 500px);
+  max-width: 470px;
+  padding-left: 12px;
+}
+.hero-content::marker { content: none; }
+
+/* Keep the two hero actions visually distinct, as in the reference */
+.hero .btn,
+.hero button.btn {
+  min-height: 48px;
+  padding: 14px 23px;
+  border: 1px solid #c6a16b;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #b58a45, #8f672e);
+  color: #fffaf1;
+  box-shadow: 0 7px 18px rgba(29,39,29,.18);
+}
+.hero .btn:hover,
+.hero button.btn:hover {
+  background: linear-gradient(135deg, #c39b59, #9a7138);
+  transform: translateY(-2px);
+}
+.hero .btn-light,
+.hero .enquiry-btn,
+.hero .enquire-btn,
+.hero button[class*="enquir"] {
+  min-height: 48px;
+  padding: 13px 22px;
+  border: 1px solid #d5bd91;
+  border-radius: 5px;
+  background: #f7f2e9;
+  color: #0b493b;
+  box-shadow: 0 7px 18px rgba(12,44,34,.13);
+}
+.hero .btn-light:hover,
+.hero .enquiry-btn:hover,
+.hero .enquire-btn:hover,
+.hero button[class*="enquir"]:hover {
+  background: #e5eee6;
+  color: #06382f;
+  transform: translateY(-2px);
+}
+
+/* Treatment section: soft sage/alabaster blend and ornamental arch */
+.treatments-section,
+.section.treatments-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 6% 10%, rgba(198,161,107,.13), transparent 28%),
+    radial-gradient(ellipse at 96% 90%, rgba(11,73,59,.08), transparent 32%),
+    linear-gradient(145deg, #f8f4eb 0%, #eef1e9 100%);
+}
+.treatments-section::before {
+  content: "";
+  position: absolute;
+  width: 310px;
+  height: 390px;
+  right: -115px;
+  top: 30px;
+  border: 1px solid rgba(181,138,69,.24);
+  border-radius: 160px 160px 0 0;
+  pointer-events: none;
+}
+.treatments-section::after {
+  content: "✧   ✦   ✧";
+  position: absolute;
+  left: 50%;
+  top: 26px;
+  transform: translateX(-50%);
+  color: rgba(177,139,83,.62);
+  letter-spacing: 18px;
+  font-size: 13px;
+  pointer-events: none;
+}
+.section-heading,
+.service-grid {
+  position: relative;
+  z-index: 1;
+}
+
+/* Treatment cards: rounded image windows, double champagne frame, lifted surface */
+.service-grid {
+  gap: 30px;
+}
+.service-card {
+  overflow: visible;
+  border: 1px solid rgba(190,153,94,.78);
+  border-radius: 22px 22px 12px 12px;
+  background: linear-gradient(155deg, #fffdf8 0%, #f1f3ec 100%);
+  box-shadow: 0 15px 35px rgba(37,55,43,.11);
+  transform: translateY(0);
+  transition: transform .32s ease, box-shadow .32s ease;
+}
+.service-card::before {
+  inset: 8px -8px -8px 8px;
+  border: 1px solid rgba(190,153,94,.58);
+  border-radius: 22px 22px 12px 12px;
+  transform: rotate(.5deg);
+}
+.service-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 23px 42px rgba(37,55,43,.17);
+}
+.service-image-wrap {
+  height: 250px;
+  border: 5px solid #f8f3e9;
+  border-radius: 19px 19px 7px 7px;
+  outline: 1px solid rgba(190,153,94,.75);
+  outline-offset: -6px;
+}
+.service-image {
+  border-radius: 13px 13px 3px 3px;
+  filter: saturate(1.08) contrast(1.02);
+}
+.service-copy {
+  padding: 23px 23px 26px;
+  border-radius: 0 0 11px 11px;
+  background: linear-gradient(145deg, #fffdf8 0%, #edf2eb 100%);
+}
+.service-copy h3 {
+  color: #0b493b;
+}
+.service-copy p {
+  color: #716a60;
+}
+.service-copy .text-link {
+  color: #926b35;
+}
+.service-copy .text-link:hover {
+  color: #0b493b;
+}
+
+/* Booking modal: green-tinted panel and green/gold action */
+.modal-card {
+  background: linear-gradient(145deg, #fbfaf4 0%, #eaf0e9 100%);
+  border: 1px solid rgba(198,161,107,.82);
+  border-top: 5px solid #0b493b;
+  border-radius: 20px;
+}
+.modal-card h2 {
+  color: #0b493b;
+}
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  background: #f8faf6;
+  border: 1px solid #c7d5c9;
+  color: #183d32;
+}
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  border-color: #0b7258;
+  box-shadow: 0 0 0 3px rgba(11,73,59,.12);
+}
+.booking-form .btn,
+.booking-form button[type="submit"] {
+  background: linear-gradient(120deg, #0b493b, #12634d);
+  border: 1px solid #c6a16b;
+  color: #f8e7c4;
+  border-radius: 8px;
+}
+.booking-form .btn:hover,
+.booking-form button[type="submit"]:hover {
+  background: linear-gradient(120deg, #07382f, #0b493b);
+}
+.modal-close {
+  background: #e2ece3;
+  color: #0b493b;
+  border: 1px solid rgba(198,161,107,.5);
+}
+.modal-close:hover {
+  background: #d2e2d5;
+}
+
+/* Contact/footer: deep botanical green with champagne accents */
+.footer {
+  background:
+    radial-gradient(circle at 88% 18%, rgba(234,215,180,.17) 0 1px, transparent 2px),
+    radial-gradient(circle at 74% 76%, rgba(234,215,180,.12) 0 1px, transparent 2px),
+    linear-gradient(135deg, #062f27 0%, #0b493b 58%, #062f27 100%);
+  color: #f8f2e8;
+}
+.footer-main h4 {
+  color: #e7c98f;
+}
+.footer-main p,
+.footer-main a:not(.brand),
+.footer-main span {
+  color: #e0e8df;
+}
+.footer-bottom {
+  border-top-color: rgba(234,215,180,.25);
+  color: #d3dccc;
+}
+.footer .brand,
+.footer-brand {
+  color: #fffaf0;
+}
+.footer .brand b {
+  color: #e3c28b;
+}
+
+/* Keep the fixed chat/enquiry contact control in the same emerald identity */
+.chat-launcher {
+  background: linear-gradient(135deg, #0b493b, #062f27);
+  border: 1px solid rgba(198,161,107,.8);
+  box-shadow: 0 9px 25px rgba(6,47,39,.24);
+}
+.chat-launcher:hover {
+  box-shadow: 0 13px 30px rgba(6,47,39,.32);
+}
+.chat-head {
+  background: linear-gradient(120deg, #062f27, #0b5946);
+}
+.chat-book,
+.chat-input button {
+  background: #0b493b;
+  color: #f8e7c4;
+}
+.chat-book:hover:not(:disabled),
+.chat-input button:hover:not(:disabled) {
+  background: #06382f;
+}
+
+@media (max-width: 760px) {
+  .hero::before {
+    width: 84%;
+    border-radius: 0 0 115px 0;
+  }
+  .hero-content {
+    width: 84%;
+    padding-left: 4px;
+  }
+  .treatments-section::before {
+    width: 210px;
+    height: 270px;
+    right: -110px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero::before {
+    width: 92%;
+    border-radius: 0 0 85px 0;
+  }
+  .hero-content {
+    width: 92%;
+  }
+  .service-card,
+  .service-card::before {
+    border-radius: 18px 18px 10px 10px;
+  }
+  .service-image-wrap {
+    border-radius: 15px 15px 6px 6px;
+  }
+}
+
+/* =========================================================
+  FINAL REFERENCE MATCH — Glow Med Spa
+  Compact botanical About panel, emerald layered treatment
+  frames, curved glow arch, and rounded controls.
+  ========================================================= */
+:root {
+  --glow-emerald: #0b493b;
+  --glow-emerald-deep: #06372e;
+  --glow-emerald-soft: #e4eee6;
+  --glow-gold: #bd9658;
+  --glow-gold-light: #e8d4ad;
+  --glow-ivory: #f6f1e7;
+  --glow-paper: #fffdf8;
+}
+
+/* About section: compact split composition like reference image 2 */
+.about-section {
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr);
+  gap: clamp(28px, 5vw, 76px);
+  align-items: center;
+  min-height: 300px;
+  padding: 54px clamp(28px, 7vw, 110px);
+  background-color: #f4efe4;
+  background-image:
+    radial-gradient(ellipse at 8% 90%, rgba(11,73,59,.055), transparent 36%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='320' viewBox='0 0 420 320'%3E%3Cg fill='none' stroke='%23b9a77f' stroke-opacity='.22' stroke-width='1.5'%3E%3Cpath d='M-20 310C70 235 100 160 115 10M25 270C0 220 10 180 45 155C65 195 55 235 25 270ZM75 210C120 180 145 135 150 90C105 105 80 150 75 210ZM110 145C75 105 80 65 120 35C145 80 140 115 110 145ZM180 320C235 240 260 170 275 65M215 255C180 220 180 180 215 145C245 190 240 225 215 255ZM275 150C320 110 350 65 355 20C310 45 285 90 275 150Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto, 340px auto;
+}
+.about-icon {
+  display: none;
+}
+.about-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 590px;
+  padding-left: clamp(0px, 2vw, 24px);
+}
+.about-copy h2 {
+  max-width: 570px;
+  margin: 10px 0 12px;
+  font-size: clamp(31px, 3vw, 43px);
+  line-height: 1.12;
+  color: #302820;
+}
+.about-copy p {
+  max-width: 560px;
+  margin: 0 0 16px;
+  line-height: 1.7;
+}
+.about-points {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 20px;
+  padding: 8px 0 8px 8px;
+}
+.about-points > div {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 13px;
+  align-items: start;
+}
+.about-points svg {
+  width: 25px;
+  height: 25px;
+  color: #98723e;
+  stroke-width: 1.65;
+}
+.about-points b {
+  display: block;
+  color: #263b31;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.about-points small {
+  display: block;
+  color: #776d61;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.about-section::after {
+  right: 5%;
+  top: 10%;
+  color: rgba(189,150,88,.62);
+}
+
+/* Hero: a sweeping curved emerald edge and illuminated arch */
+.hero {
+  overflow: hidden;
+  isolation: isolate;
+  background-position: center center;
+}
+.hero::before {
+  width: min(45%, 610px);
+  border-radius: 0 0 46% 0 / 0 0 34% 0;
+  clip-path: none;
+  background:
+    radial-gradient(ellipse at 92% 6%, rgba(232,212,173,.16), transparent 35%),
+    radial-gradient(circle at 16% 74%, rgba(232,212,173,.20) 0 1px, transparent 2px),
+    radial-gradient(circle at 70% 25%, rgba(232,212,173,.22) 0 1px, transparent 2px),
+    linear-gradient(145deg, rgba(5,49,39,.82), rgba(7,63,50,.76));
+  backdrop-filter: blur(1.5px);
+}
+.hero::after {
+  content: "✦";
+  right: auto;
+  left: 39%;
+  top: 15%;
+  bottom: auto;
+  color: #f0d9a8;
+  text-shadow: 0 0 12px rgba(240,217,168,.9), 0 0 32px rgba(240,217,168,.6);
+}
+.hero-content {
+  border-radius: 0 0 120px 0;
+}
+
+/* A second fine gold curve creates the glowing reception-arch effect */
+.hero-content::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -30px;
+  top: 8%;
+  width: calc(100% + 75px);
+  height: 88%;
+  border: 1px solid rgba(232,212,173,.24);
+  border-right-color: rgba(232,212,173,.62);
+  border-bottom-color: rgba(232,212,173,.38);
+  border-radius: 0 0 46% 0 / 0 0 30% 0;
+  box-shadow: 12px 10px 32px rgba(232,212,173,.08), inset -8px -8px 24px rgba(232,212,173,.035);
+  pointer-events: none;
+}
+.hero-content::after {
+  content: "✧";
+  z-index: 2;
+}
+
+/* Treatment cards: emerald outline + multiple offset frames behind each card */
+.service-card {
+  border: 1.5px solid rgba(11,73,59,.78) !important;
+  border-radius: 18px 18px 13px 13px !important;
+  background: linear-gradient(150deg, #fffdf8 0%, #edf3ec 100%) !important;
+  box-shadow: 0 14px 30px rgba(6,55,46,.12), 0 2px 5px rgba(6,55,46,.06) !important;
+}
+.service-card::before {
+  inset: 7px -8px -8px 8px !important;
+  border: 1px solid rgba(11,73,59,.62) !important;
+  border-radius: 18px 18px 13px 13px !important;
+  transform: rotate(.7deg) !important;
+  background: rgba(11,73,59,.025);
+}
+.service-card::after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 13px -14px -14px 14px;
+  border: 1px solid rgba(189,150,88,.55);
+  border-radius: 18px 18px 13px 13px;
+  transform: rotate(1.15deg);
+  pointer-events: none;
+}
+.service-card:hover::before { transform: rotate(.15deg) translate(2px,2px) !important; }
+.service-card:hover::after { transform: rotate(.35deg) translate(2px,2px); }
+.service-image-wrap {
+  border-radius: 15px 15px 5px 5px !important;
+  border: 5px solid #e5eee5 !important;
+  outline: 1px solid rgba(11,73,59,.72) !important;
+  outline-offset: -6px !important;
+}
+.service-image { border-radius: 10px 10px 2px 2px !important; }
+.service-copy {
+  background: linear-gradient(145deg, #fffdf8, #edf3ec) !important;
+  border-radius: 0 0 12px 12px !important;
+}
+.service-copy h3 { color: #0b493b !important; }
+
+/* All buttons and clickable CTA surfaces have softly curved corners */
+button,
+.btn,
+.btn-light,
+.booking-form button,
+.modal-card button,
+.navbar button,
+.hero button,
+.text-link,
+.chatbot-toggle,
+button[class*="btn"],
+button[class*="enquir"] {
+  border-radius: 14px !important;
+}
+.btn,
+.hero .btn,
+.booking-form .btn,
+.modal-card .btn {
+  border-radius: 14px !important;
+}
+.hero .btn-light,
+.hero .enquiry-btn,
+.hero .enquire-btn,
+.hero button[class*="enquir"] {
+  border-radius: 14px !important;
+}
+
+/* Booking/enquiry dialog: emerald wash, rounded fields and gold focus */
+.modal-card {
+  border-radius: 22px !important;
+  background: linear-gradient(145deg, #fbfaf4 0%, #eaf1e9 100%) !important;
+  border: 1px solid rgba(189,150,88,.75) !important;
+}
+.modal-close {
+  border-radius: 14px !important;
+  background: #e4eee6 !important;
+  color: #0b493b !important;
+}
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  border-radius: 11px !important;
+}
+
+/* Contact CTA and footer: coordinated deep green rather than unrelated flat blocks */
+.booking-cta {
+  background:
+    radial-gradient(circle at 12% 25%, rgba(232,212,173,.18) 0 1px, transparent 2px),
+    radial-gradient(circle at 85% 70%, rgba(232,212,173,.16) 0 1px, transparent 2px),
+    linear-gradient(120deg, #073b30, #0b493b 58%, #062f27) !important;
+}
+.booking-cta h2,
+.booking-cta p { color: #fffaf1 !important; }
+.footer {
+  background: linear-gradient(120deg, #062f27, #0b493b 58%, #062f27) !important;
+}
+.footer a,
+.footer p,
+.footer small { color: rgba(255,250,241,.82); }
+
+/* Responsive layout */
+@media (max-width: 850px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 48px 7%;
+    background-size: 260px auto;
+  }
+  .about-points { gap: 16px; padding-left: 0; }
+  .hero::before { width: 62%; border-radius: 0 0 38% 0 / 0 0 25% 0; }
+}
+@media (max-width: 600px) {
+  .about-section { padding: 40px 6%; }
+  .about-copy h2 { font-size: 32px; }
+  .hero { min-height: 600px; }
+  .hero::before { width: 88%; }
+  .hero-content { width: 88%; min-height: 500px; padding-right: 18px; }
+  .service-card::after { inset: 9px -7px -9px 7px; }
+}
+
+/* =========================================================
+  FINAL REFERENCE MATCH — ARCH, DOUBLE BOTANICALS, GOLD FRAMES
+  ========================================================= */
+
+/* Add a soft architectural arch over the reception wall in the hero.
+  This is a CSS ornament; the existing reception photograph remains intact. */
+.hero-caption {
+  position: absolute;
+  z-index: 3;
+}
+.hero-caption::before {
+  content: "";
+  position: absolute;
+  width: clamp(230px, 27vw, 410px);
+  height: clamp(330px, 43vw, 540px);
+  right: clamp(110px, 12vw, 210px);
+  bottom: -26px;
+  border: 2px solid rgba(232, 196, 126, .72);
+  border-bottom: 0;
+  border-radius: 50% 50% 0 0 / 34% 34% 0 0;
+  box-shadow: 0 0 12px rgba(230, 190, 112, .32),
+              inset 0 0 14px rgba(230, 190, 112, .10);
+  pointer-events: none;
+}
+
+/* Treatment cards: dark antique-gold frames only — remove emerald tint. */
+.service-card {
+  border: 1.5px solid #9a6c32 !important;
+  border-radius: 13px !important;
+  background: #fbf7ef !important;
+  box-shadow: 0 12px 28px rgba(71, 48, 21, .11) !important;
+}
+.service-card::before {
+  inset: 9px -10px -10px 10px !important;
+  border: 1.5px solid rgba(139, 94, 39, .82) !important;
+  border-radius: 13px !important;
+  transform: rotate(.8deg);
+}
+.service-card::after {
+  color: #9a6c32 !important;
+}
+.service-image-wrap {
+  border: 5px solid #eee3d1 !important;
+  outline: 1.5px solid #9a6c32 !important;
+  outline-offset: -6px !important;
+  border-radius: 10px 10px 4px 4px !important;
+}
+.service-image { border-radius: 6px 6px 2px 2px !important; }
+.service-copy {
+  background: linear-gradient(145deg, #fffdf8 0%, #f3eadb 100%) !important;
+  border-radius: 0 0 11px 11px !important;
+}
+.service-copy h3 { color: #765027 !important; }
+.service-copy p { color: #75685b !important; }
+
+/* About section: two botanical marks, layered like the compact reference. */
+.about-section {
+  background-color: #f4eee3 !important;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='300' viewBox='0 0 360 300'%3E%3Cg fill='none' stroke='%23b49a70' stroke-opacity='.22' stroke-width='1.4'%3E%3Cpath d='M18 286C94 222 115 150 126 22M63 250C38 206 29 176 30 142M87 218C130 195 151 162 164 125M106 180C72 160 61 129 60 99M126 140C167 120 189 91 202 54M205 287C246 226 265 165 273 76'/%3E%3Cpath d='M30 142C9 111 13 88 34 72C49 98 49 121 30 142ZM60 99C39 75 43 52 65 39C78 63 76 82 60 99ZM164 125C155 94 169 73 197 67C196 96 184 114 164 125ZM273 76C255 49 266 26 294 19C297 47 289 64 273 76Z'/%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='240' viewBox='0 0 260 240'%3E%3Cg fill='none' stroke='%23b49a70' stroke-opacity='.17' stroke-width='1.5'%3E%3Cpath d='M130 230C126 160 139 94 130 12M130 150C85 132 56 102 43 60M130 150C175 132 204 102 217 60M130 104C98 82 91 52 105 25M130 104C162 82 169 52 155 25'/%3E%3Cpath d='M43 60C13 61 7 37 23 17C48 23 57 42 43 60ZM217 60C247 61 253 37 237 17C212 23 203 42 217 60ZM105 25C83 3 93 -14 117 -18C127 1 123 16 105 25ZM155 25C177 3 167 -14 143 -18C133 1 137 16 155 25Z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat, no-repeat !important;
+  background-position: left bottom, 17% 8% !important;
+  background-size: 360px auto, 190px auto !important;
+}
+.about-section::before {
+  content: "✧   ✧";
+  position: absolute;
+  left: 5.4%;
+  top: 38%;
+  color: rgba(164, 119, 57, .62);
+  font-size: 21px;
+  letter-spacing: 13px;
+  text-shadow: 0 0 12px rgba(198, 161, 107, .36);
+  pointer-events: none;
+}
+.about-section::after {
+  content: "✧";
+  color: rgba(164, 119, 57, .55) !important;
+}
+
+/* Return the contact call-to-action and footer to the reference's rich wine tone. */
+.booking-cta {
+  background:
+    radial-gradient(circle at 10% 22%, rgba(234,215,180,.17) 0 1px, transparent 2px),
+    radial-gradient(circle at 86% 68%, rgba(234,215,180,.14) 0 1px, transparent 2px),
+    linear-gradient(120deg, #250d19 0%, #421a2c 54%, #2b101e 100%) !important;
+}
+.booking-cta h2,
+.booking-cta p { color: #fff9f0 !important; }
+.footer {
+  background: linear-gradient(135deg, #1e0b14 0%, #321322 58%, #210c17 100%) !important;
+}
+.footer-main h4 { color: #e6c58e !important; }
+.footer-main p,
+.footer-main a:not(.brand),
+.footer-main span,
+.footer-bottom { color: #dfd1c3 !important; }
+.footer-bottom { border-top-color: rgba(230,197,142,.28) !important; }
+
+/* Make all primary, secondary and floating controls consistently rounded. */
+button, .btn, .btn-light, .text-link, .chatbot-toggle,
+.booking-form button, .modal-card button, .navbar button,
+.hero button, button[class*="enquir"] {
+  border-radius: 16px !important;
+}
+
+@media (max-width: 760px) {
+  .hero-caption::before { display: none; }
+  .about-section {
+    background-size: 245px auto, 145px auto !important;
+    background-position: left bottom, 8% 3% !important;
+  }
+  .about-section::before { left: 6%; top: 12%; font-size: 16px; }
+  .service-card::before { inset: 6px -6px -6px 6px !important; }
+}
+
+
+/* =========================================================
+  FINAL REFINEMENT — NO DECORATIVE DOOR OUTLINES
+  Soft reception-wall glow, paired botanical sparkles,
+  and a cleaner emerald/champagne treatment.
+  ========================================================= */
+
+/* Remove the added arch/door outlines from the hero/header.
+  Keep the original reception photograph and the curved green text panel. */
+.hero {
+  overflow: hidden;
+  isolation: isolate;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* The green panel is a single soft curve, not a second doorway. */
+.hero::before {
+  width: min(43%, 590px);
+  border-radius: 0 0 155px 0;
+  border-right: 0;
+  outline: 0;
+  box-shadow: 18px 0 48px rgba(25,24,17,.10);
+  background:
+    radial-gradient(ellipse at 78% 18%, rgba(232,199,137,.15), transparent 36%),
+    radial-gradient(circle at 18% 78%, rgba(234,215,180,.17) 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 22%, rgba(234,215,180,.22) 0 1px, transparent 2px),
+    radial-gradient(circle at 42% 58%, rgba(234,215,180,.14) 0 1.5px, transparent 2.5px),
+    linear-gradient(145deg, rgba(5,49,39,.84), rgba(7,63,50,.77));
+  backdrop-filter: blur(1px);
+}
+
+/* Replace the tall door-like line with a warm, diffused wall glow.
+  It sits over the reception-photo side, not around the whole hero. */
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  left: 57%;
+  top: 7%;
+  width: min(39vw, 510px);
+  height: min(39vw, 510px);
+  border: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(ellipse at 50% 50%,
+      rgba(255,224,167,.20) 0%,
+      rgba(255,218,150,.11) 28%,
+      rgba(255,213,139,.045) 48%,
+      transparent 70%);
+  filter: blur(17px);
+  box-shadow:
+    0 0 38px rgba(255,220,157,.12),
+    inset 0 0 34px rgba(255,230,183,.08);
+  animation: receptionWallGlow 5.5s ease-in-out infinite alternate;
+}
+@keyframes receptionWallGlow {
+  from { opacity: .55; transform: scale(.96); }
+  to   { opacity: .95; transform: scale(1.04); }
+}
+
+/* Remove extra star decorations that were positioned like an arch frame.
+  The small eyebrow icon remains part of the React content. */
+.hero-content::before,
+.hero-content::after {
+  content: none !important;
+}
+
+/* Paired sparkle symbols in the About section — two separate glints. */
+.about-section::after {
+  content: "✧  ✦";
+  position: absolute;
+  right: 7%;
+  top: 13%;
+  display: block;
+  color: rgba(177,139,83,.72);
+  font-size: 25px;
+  letter-spacing: 8px;
+  text-shadow:
+    0 0 9px rgba(199,163,106,.55),
+    0 0 20px rgba(199,163,106,.25);
+  animation: glowTwinkle 4.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Keep the treatment cards antique-gold, never green. */
+.treatments-section,
+.section.treatments-section {
+  background:
+    radial-gradient(ellipse at 7% 8%, rgba(198,161,107,.10), transparent 30%),
+    radial-gradient(ellipse at 96% 92%, rgba(198,161,107,.07), transparent 32%),
+    linear-gradient(145deg, #faf6ee 0%, #f2ece1 100%);
+}
+.service-card {
+  border: 1px solid rgba(139,98,43,.78);
+  background: linear-gradient(155deg, #fffdf8 0%, #f7f0e5 100%);
+  box-shadow: 0 14px 32px rgba(76,52,24,.10);
+}
+.service-card::before {
+  border-color: rgba(139,98,43,.58);
+}
+.service-copy {
+  background: linear-gradient(145deg, #fffdf8 0%, #f7f0e5 100%);
+}
+.service-copy h3 {
+  color: #174d40;
+}
+.service-copy .text-link {
+  color: #8c6738;
+}
+.service-copy .text-link:hover {
+  color: #5f421f;
+}
+
+/* Rounded, consistent buttons throughout the public-facing site. */
+.btn,
+.btn-light,
+.nav-links .btn,
+.hero button,
+.booking-form button,
+.chat-launcher,
+.chat-book,
+.quick-replies button {
+  border-radius: 22px;
+}
+
+/* Mobile: keep the glow subtle and avoid covering the reception image. */
+@media (max-width: 760px) {
+  .hero::before {
+    width: 86%;
+    border-radius: 0 0 105px 0;
+  }
+  .hero::after {
+    left: 54%;
+    top: 15%;
+    width: 62vw;
+    height: 62vw;
+    opacity: .45;
+  }
+  .about-section::after {
+    right: 5%;
+    top: 5%;
+    font-size: 19px;
+  }
+}
+
+/* =====================================
+  GLOW MED SPA - PERSONALIZED ABOUT
+  Additive overrides for the reference layout
+===================================== */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.hero-actions .btn,
+.hero-actions .btn-enquire,
+.btn,
+.btn-light,
+.booking-cta .btn {
+  border-radius: 18px;
+}
+
+.hero-actions .btn-enquire {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 0 25px;
+  color: #164d3e;
+  background: #f8f1e7;
+  border: 1px solid #c8a66b;
+}
+
+.about-personalized {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  align-items: center;
+  gap: clamp(38px, 7vw, 100px);
+  padding: clamp(65px, 8vw, 110px) 8%;
+  background:
+    radial-gradient(ellipse at 8% 95%, rgba(201, 170, 119, .16), transparent 38%),
+    #f5efe4;
+}
+
+.about-personalized::before,
+.about-personalized::after {
+  content: "✧";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  color: rgba(173, 133, 75, .34);
+  font-family: Georgia, serif;
+}
+
+.about-personalized::before {
+  top: 32px;
+  right: 7%;
+  font-size: 34px;
+}
+
+.about-personalized::after {
+  left: 4%;
+  bottom: 20px;
+  font-size: 27px;
+}
+
+.about-personalized .about-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+}
+
+.about-personalized .eyebrow {
+  color: #98703c;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.about-personalized .about-copy h2 {
+  max-width: 680px;
+  margin: 18px 0;
+  color: #34291f;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(36px, 4.2vw, 58px);
+  line-height: 1.08;
+}
+
+.about-personalized .about-copy p {
+  max-width: 650px;
+  color: #81776b;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.about-personalized .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #93672e;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.about-personalized .about-points {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.about-personalized .about-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.about-personalized .about-point-icon {
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  color: #a47a3f;
+  stroke-width: 1.7;
+}
+
+.about-personalized .about-point span {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.about-personalized .about-point b {
+  color: #29443a;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.about-personalized .about-point small {
+  color: #81776b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .hero-actions {
+    gap: 12px;
+  }
+
+  .about-personalized {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    padding: 65px 7%;
+  }
+
+  .about-personalized .about-copy h2 {
+    font-size: 38px;
+  }
+
+  .about-personalized .about-points {
+    gap: 24px;
+  }
+}
+
+
+/* =========================================================
+  FINAL POLISH — REMOVE ARCH OUTLINES, ADD RECEPTION TWINKLE
+  AND DOUBLE-LAYER PERSONALIZED FEATURE CARDS
+========================================================= */
+
+/* Keep only the naturally curved emerald panel in the hero.
+  Remove any decorative doorway/arch outlines from CSS overlays. */
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.hero::before {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: 18px 0 48px rgba(25, 24, 17, .10);
+  background:
+    radial-gradient(ellipse at 75% 18%, rgba(238, 202, 139, .12), transparent 38%),
+    linear-gradient(145deg, rgba(5, 49, 39, .86), rgba(7, 63, 50, .78));
+}
+
+/* A soft shimmer on the reception wall — no circular/door-shaped frame. */
+.hero::after {
+  content: "✦";
+  position: absolute;
+  z-index: 1;
+  left: 78%;
+  top: 20%;
+  width: 260px;
+  height: 300px;
+  display: block;
+  pointer-events: none;
+  color: #fff0c9;
+  font-family: Georgia, serif;
+  font-size: 23px;
+  line-height: 1;
+  text-align: center;
+  padding-top: 5px;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background:
+    radial-gradient(circle at 50% 15%, rgba(255, 241, 202, .95) 0 1.5px, transparent 4px),
+    radial-gradient(circle at 23% 36%, rgba(255, 225, 165, .9) 0 1.5px, transparent 5px),
+    radial-gradient(circle at 76% 48%, rgba(255, 241, 202, .9) 0 1.5px, transparent 5px),
+    radial-gradient(circle at 43% 70%, rgba(255, 222, 157, .85) 0 1px, transparent 4px),
+    radial-gradient(ellipse at 50% 45%, rgba(255, 220, 153, .16), transparent 68%);
+  filter: drop-shadow(0 0 9px rgba(255, 222, 157, .85));
+  text-shadow:
+    0 0 8px rgba(255, 238, 194, .95),
+    0 0 22px rgba(255, 211, 132, .8),
+    0 0 38px rgba(255, 211, 132, .45);
+  animation: receptionTwinkle 3.2s ease-in-out infinite alternate;
+}
+
+@keyframes receptionTwinkle {
+  0%   { opacity: .48; transform: scale(.94); filter: brightness(.95) drop-shadow(0 0 6px rgba(255, 222, 157, .5)); }
+  100% { opacity: 1; transform: scale(1.06); filter: brightness(1.15) drop-shadow(0 0 15px rgba(255, 222, 157, .95)); }
+}
+
+/* The three personalized benefits become individual layered feature tiles.
+  Each tile has a fine gold outline and a second offset outline behind it. */
+.about-personalized .about-points {
+  gap: 25px;
+}
+
+.about-personalized .about-point {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  min-height: 96px;
+  padding: 21px 24px;
+  border: 1px solid rgba(166, 124, 62, .62);
+  border-radius: 17px;
+  background: linear-gradient(135deg, rgba(255, 253, 248, .94), rgba(246, 239, 226, .96));
+  box-shadow:
+    0 10px 24px rgba(88, 65, 35, .07),
+    inset 0 1px 0 rgba(255,255,255,.9);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.about-personalized .about-point::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 5px -6px -6px 5px;
+  border: 1px solid rgba(166, 124, 62, .42);
+  border-radius: 17px;
+  background: rgba(230, 215, 190, .16);
+  pointer-events: none;
+}
+
+.about-personalized .about-point:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 16px 30px rgba(88, 65, 35, .12),
+    inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+.about-personalized .about-point-icon {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  margin-top: 2px;
+  color: #a47a3f;
+  stroke-width: 1.7;
+}
+
+.about-personalized .about-point span {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.about-personalized .about-point b {
+  color: #29443a;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.about-personalized .about-point small {
+  color: #81776b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .hero::after {
+    left: 68%;
+    top: 14%;
+    width: 150px;
+    height: 190px;
+    font-size: 18px;
+  }
+
+  .about-personalized .about-point {
+    padding: 17px 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::after {
+    animation: none;
+  }
+
+  .about-personalized .about-point {
+    transition: none;
+  }
+}
+
+
+/* =========================================================
+  FINAL HERO OVERRIDE — REFERENCE IMAGE MATCH
+  - remove decorative arch/door pseudo-elements
+  - use a tall, softly curved emerald panel (not an oval)
+  - preserve the reception photo on the right
+========================================================= */
+.hero {
+  position: relative !important;
+  min-height: 520px !important;
+  padding: 0 7% !important;
+  display: flex !important;
+  align-items: stretch !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* A clean emerald panel with the reference's sweeping right edge */
+.hero::before {
+  content: "" !important;
+  position: absolute !important;
+  z-index: 0 !important;
+  inset: 0 auto 0 0 !important;
+  width: min(43%, 650px) !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 0 !important;
+  clip-path: ellipse(94% 125% at -1% 50%) !important;
+  background:
+    radial-gradient(circle at 18% 78%, rgba(234,215,180,.13) 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 22%, rgba(234,215,180,.16) 0 1px, transparent 2px),
+    linear-gradient(145deg, #063b30 0%, #07513f 100%) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Remove all decorative doorway outlines and sparkle overlays */
+.hero::after,
+.hero-content::before,
+.hero-content::after,
+.hero-caption::before,
+.hero-caption::after {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+.hero-content {
+  position: relative !important;
+  z-index: 2 !important;
+  width: min(43%, 500px) !important;
+  max-width: 470px !important;
+  min-height: 520px !important;
+  padding: 0 0 0 12px !important;
+  margin: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+.hero-caption {
+  display: none !important;
+}
+
+.hero .eyebrow {
+  color: #e8c985 !important;
+}
+
+.hero h1 {
+  color: #fffaf2 !important;
+}
+
+.hero h1 em {
+  color: #edc77e !important;
+}
+
+.hero p {
+  color: #fffaf2 !important;
+}
+
+/* FINAL FIX: REMOVE ALL EXTRA GOLD DOOR/ARCH DECORATIONS */
+
+.hero-content::before,
+.hero-content::after,
+.hero::after {
+  content: none !important;
+  display: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+/* Keep the reference-style emerald curved panel */
+.hero::before {
+  border: none !important;
+  outline: none !important;
+  box-shadow: 18px 0 35px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Preserve the hero content */
+.hero-content {
+  border: none !important;
+  outline: none !important;
+}
+
+/* GLOW MED SPA — TRANSPARENT EMERALD + GOLD CURVE */
+
+.hero::before {
+  background:
+    radial-gradient(
+      circle at 18% 78%,
+      rgba(234, 215, 180, .12) 0 1px,
+      transparent 2px
+    ),
+    linear-gradient(
+      145deg,
+      rgba(5, 49, 39, .87),
+      rgba(7, 63, 50, .82)
+    ) !important;
+
+  /* Fine champagne-gold lining along the curve */
+  border-right: 2px solid rgba(218, 181, 112, .95) !important;
+
+  box-shadow:
+    8px 0 22px rgba(0, 0, 0, .10),
+    2px 0 10px rgba(218, 181, 112, .12) !important;
+
+  backdrop-filter: blur(2px);
+}
+
+/* Keep the hero content above the green panel */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================
+  GLOW MED SPA — FINAL HERO REFINEMENT
+========================================== */
+
+/* 1. Transparent emerald panel with gold curved edge */
+.hero::before {
+  width: min(46%, 650px) !important;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(5, 49, 39, 0.78),
+      rgba(7, 63, 50, 0.70)
+    ) !important;
+
+  border: none !important;
+  border-right: 2px solid #d6ad68 !important;
+
+  box-shadow:
+    5px 0 16px rgba(0, 0, 0, 0.10),
+    2px 0 8px rgba(214, 173, 104, 0.20) !important;
+
+  backdrop-filter: blur(2px);
+}
+
+/* 2. Primary booking button — champagne gold */
+.hero .btn,
+.hero button.btn {
+  background: linear-gradient(
+    135deg,
+    #c49a52,
+    #987039
+  ) !important;
+
+  color: #fffaf0 !important;
+  border: 1px solid #e1c18a !important;
+  border-radius: 30px !important;
+
+  box-shadow: 0 6px 18px rgba(92, 62, 24, 0.20);
+}
+
+.hero .btn:hover,
+.hero button.btn:hover {
+  background: linear-gradient(
+    135deg,
+    #d1aa68,
+    #a77d3d
+  ) !important;
+
+  transform: translateY(-2px);
+}
+
+/* 3. Keep enquiry button elegant and light */
+.hero .btn-light,
+.hero .enquiry-btn,
+.hero .enquire-btn,
+.hero button[class*="enquir"] {
+  background: #fffaf1 !important;
+  color: #0b493b !important;
+  border: 1px solid #d6ad68 !important;
+  border-radius: 30px !important;
+}
+
+/* 4. Keep text above the panel */
+.hero-content {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* ==========================================
+  GLOW MED SPA — GOLD CURVE + TWINKLING
+========================================== */
+
+/* Gold lining along the curved emerald panel */
+.hero::before {
+  box-sizing: border-box !important;
+  border-right: 2px solid #d8b36f !important;
+
+  box-shadow:
+    2px 0 8px rgba(232, 195, 125, .35),
+    5px 0 18px rgba(232, 195, 125, .16) !important;
+}
+
+/* Reception sparkle overlay */
+.hero::after {
+  content: "✦" !important;
+  display: block !important;
+  position: absolute !important;
+
+  left: 82% !important;
+  top: 19% !important;
+  right: auto !important;
+  bottom: auto !important;
+
+  width: 240px !important;
+  height: 250px !important;
+
+  color: #fff0c5 !important;
+  font-family: Georgia, serif !important;
+  font-size: 22px !important;
+
+  pointer-events: none !important;
+  z-index: 3 !important;
+
+  background:
+    radial-gradient(circle at 15% 12%,
+      #fff1c9 0 1px, transparent 3px),
+    radial-gradient(circle at 70% 20%,
+      #ffe4a5 0 1.5px, transparent 4px),
+    radial-gradient(circle at 42% 43%,
+      #fff0c5 0 1px, transparent 3px),
+    radial-gradient(circle at 85% 58%,
+      #ffe4a5 0 1.5px, transparent 4px),
+    radial-gradient(circle at 25% 78%,
+      #fff0c5 0 1px, transparent 3px);
+
+  text-shadow:
+    0 0 8px #f8d991,
+    0 0 18px rgba(255, 215, 140, .9);
+
+  filter: drop-shadow(0 0 8px rgba(255, 220, 155, .8));
+
+  animation: glowReceptionTwinkle 2.8s ease-in-out infinite alternate;
+}
+
+@keyframes glowReceptionTwinkle {
+  0% {
+    opacity: .45;
+    transform: scale(.92);
+    filter: brightness(.9) drop-shadow(0 0 5px #e9c47f);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.08);
+    filter: brightness(1.2) drop-shadow(0 0 14px #f4d493);
+  }
+}
+
+/* =========================================================
+   GLOW MED SPA — MOBILE RESPONSIVE LAYOUT (REFERENCE MATCH)
+   Laptop / desktop rules above remain completely untouched.
+   ========================================================= */
+
+@media (max-width: 768px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* 1. Top Navbar */
+  .navbar {
+    height: 74px !important;
+    padding: 0 5.5% !important;
+    background: #fdfaf5 !important;
+    border-bottom: 1px solid #efe7dc !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    font-size: 22px !important;
+    color: #5c4628 !important;
+  }
+
+  .brand b {
+    color: #7c5c32 !important;
+    font-weight: 500 !important;
+  }
+
+  .brand-mark {
+    width: 36px !important;
+    height: 36px !important;
+    background: #f2e8d9 !important;
+    color: #9b7744 !important;
+    border: 1px solid rgba(198, 161, 107, 0.45) !important;
+  }
+
+  .mobile-menu {
+    display: grid !important;
+    place-items: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    color: #1f1c18 !important;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 74px;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    padding: 20px 6%;
+    background: #fffdfa;
+    border-bottom: 1px solid #eee5da;
+    box-shadow: 0 12px 24px rgba(40, 30, 20, .08);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 17px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a,
+  .nav-links button {
+    padding: 5px 0;
+    font-size: 14px;
+  }
+
+  /* 2. Full-Height Reception Hero Image */
+  .hero {
+    position: relative !important;
+    width: 100% !important;
+    height: calc(100svh - 74px) !important;
+    min-height: 690px !important;
+    max-height: 840px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    overflow: hidden !important;
+    background-size: cover !important;
+    background-position: 64% center !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* Remove extra sparkles/arches so the reception wall sign stays crisp */
+  .hero::after,
+  .hero-content::before,
+  .hero-content::after,
+  .hero-caption {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* 3. Bottom-Left Translucent Emerald Overlay Card */
+  .hero::before {
+    content: "" !important;
+    position: absolute !important;
+    z-index: 1 !important;
+    left: 0 !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: 5.5% !important;
+    width: 58% !important;
+    min-width: 245px !important;
+    max-width: 335px !important;
+    height: auto !important;
+    min-height: 295px !important;
+    border: 0 !important;
+    border-right: 1px solid rgba(214, 173, 104, 0.45) !important;
+    border-radius: 0 26px 96px 0 !important;
+    clip-path: none !important;
+    background: linear-gradient(
+      155deg,
+      rgba(16, 69, 53, 0.76) 0%,
+      rgba(22, 78, 60, 0.72) 100%
+    ) !important;
+    backdrop-filter: blur(2.5px) !important;
+    box-shadow: 0 12px 32px rgba(15, 35, 28, 0.14) !important;
+  }
+
+  /* 4. Hero Text & CTA Buttons Positioned Inside the Card */
+  .hero-content {
+    position: absolute !important;
+    z-index: 2 !important;
+    left: 0 !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: 5.5% !important;
+    width: 58% !important;
+    min-width: 245px !important;
+    max-width: 335px !important;
+    height: auto !important;
+    min-height: 295px !important;
+    margin: 0 !important;
+    padding: 26px 22px 28px 20px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+  }
+
+  .hero .eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-size: 9.5px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+    color: #e8cfa0 !important;
+    margin: 0 0 10px !important;
+  }
+
+  .hero h1 {
+    display: block !important;
+    font-size: clamp(23px, 6.2vw, 29px) !important;
+    line-height: 1.14 !important;
+    letter-spacing: -0.02em !important;
+    color: #ffffff !important;
+    margin: 0 0 10px !important;
+  }
+
+  .hero h1 em {
+    color: #e9cfa0 !important;
+    font-style: italic !important;
+    font-weight: 500 !important;
+  }
+
+  .hero-content p {
+    display: block !important;
+    font-size: 11px !important;
+    line-height: 1.45 !important;
+    color: rgba(255, 250, 242, 0.94) !important;
+    margin: 0 0 16px !important;
+    max-width: 100% !important;
+  }
+
+  /* 5. Stacked Pill Buttons Inside the Emerald Card */
+  .hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .hero-actions .btn,
+  .hero-actions button.btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: auto !important;
+    min-width: 185px !important;
+    max-width: 100% !important;
+    min-height: 40px !important;
+    padding: 9px 16px !important;
+    margin: 0 !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    border-radius: 999px !important;
+    background: linear-gradient(135deg, #be9652 0%, #9c7438 100%) !important;
+    border: 1px solid #e3c48e !important;
+    color: #fffdf8 !important;
+    white-space: nowrap !important;
+    box-shadow: 0 4px 12px rgba(34, 24, 10, 0.18) !important;
+  }
+
+  .hero-actions .btn-light,
+  .hero-actions .btn-enquire,
+  .hero-actions .enquiry-btn,
+  .hero-actions .enquire-btn,
+  .hero-actions button[class*="enquir"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    width: auto !important;
+    min-width: 152px !important;
+    max-width: 100% !important;
+    min-height: 40px !important;
+    padding: 9px 18px !important;
+    margin: 0 !important;
+    font-size: 11.5px !important;
+    font-weight: 600 !important;
+    border-radius: 999px !important;
+    background: #f9f4eb !important;
+    border: 1px solid #d4b279 !important;
+    color: #143f31 !important;
+    white-space: nowrap !important;
+    box-shadow: 0 4px 12px rgba(10, 28, 22, 0.12) !important;
+  }
+
+  /* 6. Floating Bottom-Right Chat Pill */
+  .chat-launcher {
+    position: fixed !important;
+    z-index: 60 !important;
+    right: 14px !important;
+    bottom: 22px !important;
+    min-height: 48px !important;
+    padding: 11px 18px !important;
+    border-radius: 999px !important;
+    background: #0b4635 !important;
+    border: 1px solid rgba(214, 173, 104, 0.55) !important;
+    box-shadow: 0 8px 22px rgba(6, 36, 27, 0.28) !important;
+  }
+
+  .chat-launcher span {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+  }
+
+  /* 7. Mobile Sections, Cards, Footer & Modals */
+  .section {
+    padding: 64px 5%;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .section-heading h2,
+  .about-copy h2,
+  .booking-cta h2 {
+    font-size: clamp(28px, 6.5vw, 36px);
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    gap: 24px;
+  }
+
+  .service-image-wrap {
+    height: 235px;
+  }
+
+  .service-copy {
+    padding: 20px;
+  }
+
+  .service-copy p {
+    min-height: 0;
+  }
+
+  .about-section,
+  .about-personalized {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 52px 6%;
+  }
+
+  .about-personalized .about-point {
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .about-personalized .about-point b {
+    font-size: 15px;
+  }
+
+  .about-personalized .about-point small {
+    font-size: 13px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .form-two {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-card {
+    width: 100%;
+    max-height: calc(100dvh - 24px);
+    padding: 24px 18px;
+  }
+
+  .chat-window {
+    right: 10px;
+    bottom: 80px;
+    width: calc(100vw - 20px);
+    height: min(620px, calc(100dvh - 96px));
+  }
+}
+
+/* Fine-tuning for very narrow phones (320px - 390px) */
+@media (max-width: 390px) {
+  .brand {
+    font-size: 19px !important;
+  }
+
+  .hero::before,
+  .hero-content {
+    width: 63% !important;
+    min-width: 225px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .hero h1 {
+    font-size: 22px !important;
+  }
+
+  .hero-content p {
+    font-size: 10.5px !important;
+  }
+
+  .hero-actions .btn,
+  .hero-actions button.btn {
+    min-width: 170px !important;
+    font-size: 10.5px !important;
+    padding: 8px 13px !important;
+  }
+
+  .hero-actions .btn-light,
+  .hero-actions .btn-enquire,
+  .hero-actions button[class*="enquir"] {
+    min-width: 140px !important;
+    font-size: 11px !important;
+  }
+
+  .chat-launcher {
+    right: 10px !important;
+    bottom: 18px !important;
+    padding: 10px 14px !important;
+  }
+}
+/* =========================================================
+   GLOW MED SPA — MOBILE HERO EXACT REFERENCE FIT
+   Paste at the very bottom of your CSS file.
+   ========================================================= */
+
+@media (max-width: 768px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* 1. Top Navbar */
+  .navbar {
+    height: 70px !important;
+    padding: 0 5% !important;
+    background: #fdfaf5 !important;
+    border-bottom: 1px solid #efe7dc !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 40 !important;
+  }
+
+  .brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    font-size: 21px !important;
+    color: #5c4628 !important;
+  }
+
+  .brand b {
+    color: #7c5c32 !important;
+    font-weight: 500 !important;
+  }
+
+  .brand-mark {
+    width: 34px !important;
+    height: 34px !important;
+    background: #f2e8d9 !important;
+    color: #9b7744 !important;
+    border: 1px solid rgba(198, 161, 107, 0.45) !important;
+  }
+
+  .mobile-menu {
+    display: grid !important;
+    place-items: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    color: #1f1c18 !important;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 30;
+    padding: 20px 6%;
+    background: #fffdfa;
+    border-bottom: 1px solid #eee5da;
+    box-shadow: 0 12px 24px rgba(40, 30, 20, .08);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 17px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  /* 2. Hero Container: Prevent zooming in so the full "Glow Med Spa" wall sign shows */
+  .hero {
+    position: relative !important;
+    width: 100% !important;
+    height: 540px !important;
+    min-height: 540px !important;
+    max-height: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    overflow: hidden !important;
+    background-color: #efe6d8 !important;
+    background-size: 100% auto !important;
+    background-position: center top !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .hero::after,
+  .hero-content::before,
+  .hero-content::after,
+  .hero-caption {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* 3. Bottom-Left Translucent Emerald Card */
+  .hero::before {
+    content: "" !important;
+    position: absolute !important;
+    z-index: 1 !important;
+    left: 0 !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: 22px !important;
+    width: 57% !important;
+    min-width: 225px !important;
+    max-width: 310px !important;
+    height: auto !important;
+    min-height: 255px !important;
+    border: 0 !important;
+    border-right: 1px solid rgba(214, 173, 104, 0.45) !important;
+    border-radius: 0 22px 84px 0 !important;
+    clip-path: none !important;
+    background: linear-gradient(
+      155deg,
+      rgba(16, 69, 53, 0.80) 0%,
+      rgba(22, 78, 60, 0.76) 100%
+    ) !important;
+    backdrop-filter: blur(2.5px) !important;
+    box-shadow: 0 12px 32px rgba(15, 35, 28, 0.14) !important;
+  }
+
+  /* 4. Hero Text & Stacked Buttons Inside the Card */
+  .hero-content {
+    position: absolute !important;
+    z-index: 2 !important;
+    left: 0 !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: 22px !important;
+    width: 57% !important;
+    min-width: 225px !important;
+    max-width: 310px !important;
+    height: auto !important;
+    min-height: 255px !important;
+    margin: 0 !important;
+    padding: 20px 18px 22px 18px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+  }
+
+  .hero .eyebrow {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+    font-size: 8.5px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    color: #e8cfa0 !important;
+    margin: 0 0 8px !important;
+  }
+
+  .hero h1 {
+    display: block !important;
+    font-size: clamp(20px, 5.4vw, 26px) !important;
+    line-height: 1.14 !important;
+    letter-spacing: -0.02em !important;
+    color: #ffffff !important;
+    margin: 0 0 8px !important;
+  }
+
+  .hero h1 em {
+    color: #e9cfa0 !important;
+    font-style: italic !important;
+    font-weight: 500 !important;
+  }
+
+  .hero-content p {
+    display: block !important;
+    font-size: 10px !important;
+    line-height: 1.42 !important;
+    color: rgba(255, 250, 242, 0.94) !important;
+    margin: 0 0 13px !important;
+    max-width: 100% !important;
+  }
+
+  /* 5. Stacked Pill Buttons */
+  .hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .hero-actions .btn,
+  .hero-actions button.btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    width: auto !important;
+    min-width: 168px !important;
+    max-width: 100% !important;
+    min-height: 36px !important;
+    padding: 8px 14px !important;
+    margin: 0 !important;
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    border-radius: 999px !important;
+    background: linear-gradient(135deg, #be9652 0%, #9c7438 100%) !important;
+    border: 1px solid #e3c48e !important;
+    color: #fffdf8 !important;
+    white-space: nowrap !important;
+    box-shadow: 0 4px 12px rgba(34, 24, 10, 0.18) !important;
+  }
+
+  .hero-actions .btn-light,
+  .hero-actions .btn-enquire,
+  .hero-actions .enquiry-btn,
+  .hero-actions .enquire-btn,
+  .hero-actions button[class*="enquir"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    width: auto !important;
+    min-width: 138px !important;
+    max-width: 100% !important;
+    min-height: 36px !important;
+    padding: 8px 15px !important;
+    margin: 0 !important;
+    font-size: 10.5px !important;
+    font-weight: 600 !important;
+    border-radius: 999px !important;
+    background: #f9f4eb !important;
+    border: 1px solid #d4b279 !important;
+    color: #143f31 !important;
+    white-space: nowrap !important;
+    box-shadow: 0 4px 12px rgba(10, 28, 22, 0.12) !important;
+  }
+
+  /* 6. Floating Bottom-Right Chat Pill */
+  .chat-launcher {
+    position: fixed !important;
+    z-index: 60 !important;
+    right: 12px !important;
+    bottom: 20px !important;
+    min-height: 44px !important;
+    padding: 10px 16px !important;
+    border-radius: 999px !important;
+    background: #0b4635 !important;
+    border: 1px solid rgba(214, 173, 104, 0.55) !important;
+    box-shadow: 0 8px 22px rgba(6, 36, 27, 0.28) !important;
+  }
+
+  .chat-launcher span {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+  }
+
+  /* 7. Rest of Mobile Page */
+  .section {
+    padding: 64px 5%;
+  }
+
+  .section-heading {
+    margin-bottom: 30px;
+  }
+
+  .section-heading h2,
+  .about-copy h2,
+  .booking-cta h2 {
+    font-size: clamp(28px, 6.5vw, 36px);
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    gap: 24px;
+  }
+
+  .service-image-wrap {
+    height: 235px;
+  }
+
+  .service-copy {
+    padding: 20px;
+  }
+
+  .service-copy p {
+    min-height: 0;
+  }
+
+  .about-section,
+  .about-personalized {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 52px 6%;
+  }
+
+  .about-personalized .about-point {
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .about-personalized .about-point b {
+    font-size: 15px;
+  }
+
+  .about-personalized .about-point small {
+    font-size: 13px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .form-two {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-card {
+    width: 100%;
+    max-height: calc(100dvh - 24px);
+    padding: 24px 18px;
+  }
+
+  .chat-window {
+    right: 10px;
+    bottom: 76px;
+    width: calc(100vw - 20px);
+    height: min(620px, calc(100dvh - 96px));
+  }
+}
+/* =========================================================
+   REMOVE BOTTOM GAP IN MOBILE HERO
+   Paste at the very bottom of your CSS file.
+   ========================================================= */
+@media (max-width: 768px) {
+  .hero {
+    height: 490px !important;
+    min-height: 490px !important;
+    background-size: 100% 100% !important;
+    background-position: center top !important;
+  }
+
+  .hero::before,
+  .hero-content {
+    bottom: 16px !important;
+    min-height: 235px !important;
+  }
+
+  .hero-content {
+    padding: 16px 16px 18px 16px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(19px, 5vw, 24px) !important;
+    margin-bottom: 6px !important;
+  }
+
+  .hero-content p {
+    font-size: 9.5px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .hero-actions {
+    gap: 7px !important;
+  }
+
+  .hero-actions .btn,
+  .hero-actions button.btn,
+  .hero-actions .btn-light,
+  .hero-actions .btn-enquire,
+  .hero-actions button[class*="enquir"] {
+    min-height: 33px !important;
+    padding: 7px 13px !important;
+    font-size: 9.5px !important;
+  }
+}
+/* =========================================================
+   FINAL PROPORTION TWEAK — NATURAL ASPECT RATIO + FLOOR SPACE
+   Paste at the very bottom of your CSS file.
+   ========================================================= */
+@media (max-width: 768px) {
+  .hero {
+    height: 555px !important;
+    min-height: 555px !important;
+    /* Uses natural image proportions with a seamless warm marble floor gradient underneath */
+    background-size: 100% auto !important;
+    background-position: center top !important;
+    background-color: #f3eae0 !important;
+  }
+
+  .hero::before,
+  .hero-content {
+    bottom: 24px !important;
+  }
+
+  .chat-launcher {
+    bottom: 24px !important;
+  }
+}
+/* =========================================================
+   COMPACT GREEN CARD OVER FULL RECEPTION IMAGE (NO GAP)
+   Paste at the very bottom of your CSS file.
+   ========================================================= */
+@media (max-width: 768px) {
+  .hero {
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 4 / 3 !important;
+    background-size: 100% 100% !important;
+    background-position: center center !important;
+  }
+
+  /* Smaller, tighter translucent emerald card sitting inside the bottom-left of the photo */
+  .hero::before,
+  .hero-content {
+    left: 0 !important;
+    bottom: 10px !important;
+    width: 52% !important;
+    min-width: 190px !important;
+    max-width: 265px !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .hero::before {
+    top: auto !important;
+    bottom: 10px !important;
+    height: 175px !important;
+    border-radius: 0 18px 64px 0 !important;
+    background: rgba(16, 69, 53, 0.78) !important;
+  }
+
+  .hero-content {
+    padding: 12px 14px 14px 14px !important;
+  }
+
+  .hero .eyebrow {
+    font-size: 7.5px !important;
+    letter-spacing: 0.12em !important;
+    margin-bottom: 4px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(16px, 4.4vw, 21px) !important;
+    line-height: 1.12 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .hero-content p {
+    font-size: 8.5px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 9px !important;
+  }
+
+  .hero-actions {
+    gap: 5px !important;
+  }
+
+  .hero-actions .btn,
+  .hero-actions button.btn {
+    min-width: 142px !important;
+    min-height: 28px !important;
+    padding: 5px 11px !important;
+    font-size: 8.5px !important;
+  }
+
+  .hero-actions .btn-light,
+  .hero-actions .btn-enquire,
+  .hero-actions button[class*="enquir"] {
+    min-width: 118px !important;
+    min-height: 28px !important;
+    padding: 5px 12px !important;
+    font-size: 9px !important;
+  }
+
+  .chat-launcher {
+    right: 10px !important;
+    bottom: 12px !important;
+    min-height: 36px !important;
+    padding: 7px 13px !important;
+  }
+
+  .chat-launcher span {
+    font-size: 11px !important;
+  }
+}
+/* =========================================================
+   NARROWER, MORE TRANSPARENT GREEN PANEL + FULL HORIZONTAL HERO
+   Paste at the very bottom of your CSS file.
+   ========================================================= */
+@media (max-width: 768px) {
+  .hero {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 4 / 3 !important;
+    background-size: 100% 100% !important;
+    background-position: center center !important;
+  }
+
+  .hero::before,
+  .hero-content {
+    left: 0 !important;
+    bottom: 8px !important;
+    width: 44% !important;
+    min-width: 162px !important;
+    max-width: 220px !important;
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .hero::before {
+    top: auto !important;
+    bottom: 8px !important;
+    height: 158px !important;
+    border-right: 1px solid rgba(214, 173, 104, 0.35) !important;
+    border-radius: 0 16px 56px 0 !important;
+    background: linear-gradient(
+      155deg,
+      rgba(16, 69, 53, 0.56) 0%,
+      rgba(22, 78, 60, 0.48) 100%
+    ) !important;
+    backdrop-filter: blur(1.5px) !important;
+    box-shadow: 0 8px 20px rgba(15, 35, 28, 0.08) !important;
+  }
+
+  .hero-content {
+    padding: 10px 11px 12px 12px !important;
+  }
+
+  .hero .eyebrow {
+    font-size: 6.5px !important;
+    letter-spacing: 0.1em !important;
+    margin-bottom: 3px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(14px, 3.8vw, 18px) !important;
+    line-height: 1.12 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .hero-content p {
+    font-size: 7.5px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 7px !important;
+  }
+
+  .hero-actions {
+    gap: 4px !important;
+  }
+
+  .hero-actions .btn,
+  .hero-actions button.btn {
+    min-width: 118px !important;
+    min-height: 24px !important;
+    padding: 4px 8px !important;
+    font-size: 7.5px !important;
+  }
+
+  .hero-actions .btn-light,
+  .hero-actions .btn-enquire,
+  .hero-actions button[class*="enquir"] {
+    min-width: 98px !important;
+    min-height: 24px !important;
+    padding: 4px 9px !important;
+    font-size: 8px !important;
+  }
+}
