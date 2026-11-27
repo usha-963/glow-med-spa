@@ -2,7 +2,35 @@
 import { useState } from "react";
 import { X, Send, Sparkles } from "lucide-react";
 
-const API = import.meta.env.VITE_API_URL || "http://127.0.0.1:5000";
+const API = (
+  import.meta.env.VITE_API_URL || "http://127.0.0.1:5000"
+).replace(/\/$/, "");
+
+// Automatically wake the backend before sending an enquiry.
+async function wakeBackend() {
+  for (let attempt = 1; attempt <= 12; attempt++) {
+    try {
+      const response = await fetch(`${API}/api/health`, {
+        method: "GET",
+        cache: "no-store",
+      });
+
+      if (response.ok) {
+        return;
+      }
+    } catch (error) {
+      // Backend may still be starting.
+    }
+
+    if (attempt < 12) {
+      await new Promise((resolve) => setTimeout(resolve, 5000));
+    }
+  }
+
+  throw new Error(
+    "The server is taking too long to start. Please try again shortly."
+  );
+}
 
 export default function EnquiryModal({ open, onClose }) {
   const [form, setForm] = useState({
@@ -24,14 +52,20 @@ export default function EnquiryModal({ open, onClose }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     setLoading(true);
     setError("");
     setSuccess(false);
 
     try {
+      // Wait for Render to become available.
+      await wakeBackend();
+
       const response = await fetch(`${API}/api/leads`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({
           name: form.name,
           email: form.email,
@@ -42,13 +76,23 @@ export default function EnquiryModal({ open, onClose }) {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || "Could not submit your enquiry.");
+        throw new Error(
+          data.error || "Could not submit your enquiry."
+        );
       }
 
       setSuccess(true);
-      setForm({ name: "", email: "", phone: "", message: "" });
+
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
     } catch (err) {
-      setError(err.message || "Unable to connect to the server.");
+      setError(
+        err.message || "Unable to connect to the server."
+      );
     } finally {
       setLoading(false);
     }
@@ -102,27 +146,38 @@ export default function EnquiryModal({ open, onClose }) {
           boxShadow: "0 20px 60px rgba(0,0,0,0.2)",
         }}
       >
-        <div style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginBottom: "22px",
-        }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginBottom: "22px",
+          }}
+        >
           <div>
-            <div style={{
-              color: "#A17B43",
-              fontSize: "11px",
-              letterSpacing: "1.5px",
-              fontWeight: 700,
-              marginBottom: "7px",
-            }}>
-              <Sparkles size={13} style={{ verticalAlign: "middle" }} /> GET IN TOUCH
+            <div
+              style={{
+                color: "#A17B43",
+                fontSize: "11px",
+                letterSpacing: "1.5px",
+                fontWeight: 700,
+                marginBottom: "7px",
+              }}
+            >
+              <Sparkles
+                size={13}
+                style={{ verticalAlign: "middle" }}
+              />{" "}
+              GET IN TOUCH
             </div>
-            <h2 style={{
-              color: "#064E3B",
-              fontSize: "25px",
-              margin: 0,
-            }}>
+
+            <h2
+              style={{
+                color: "#064E3B",
+                fontSize: "25px",
+                margin: 0,
+              }}
+            >
               Send an Enquiry
             </h2>
           </div>
@@ -148,16 +203,23 @@ export default function EnquiryModal({ open, onClose }) {
         </div>
 
         {success ? (
-          <div style={{
-            padding: "22px",
-            background: "#EDF5EF",
-            borderRadius: "12px",
-            textAlign: "center",
-            color: "#064E3B",
-          }}>
+          <div
+            style={{
+              padding: "22px",
+              background: "#EDF5EF",
+              borderRadius: "12px",
+              textAlign: "center",
+              color: "#064E3B",
+            }}
+          >
             <Sparkles size={28} />
+
             <h3>Thank you!</h3>
-            <p>Your enquiry has been saved. Our demo team can follow up with you.</p>
+
+            <p>
+              Your enquiry has been saved. Our demo team can follow up with you.
+            </p>
+
             <button
               type="button"
               onClick={onClose}
@@ -177,6 +239,7 @@ export default function EnquiryModal({ open, onClose }) {
           <form onSubmit={handleSubmit}>
             <div style={{ marginBottom: "15px" }}>
               <label style={labelStyle}>Full Name *</label>
+
               <input
                 style={inputStyle}
                 name="name"
@@ -189,6 +252,7 @@ export default function EnquiryModal({ open, onClose }) {
 
             <div style={{ marginBottom: "15px" }}>
               <label style={labelStyle}>Email Address *</label>
+
               <input
                 style={inputStyle}
                 type="email"
@@ -202,6 +266,7 @@ export default function EnquiryModal({ open, onClose }) {
 
             <div style={{ marginBottom: "15px" }}>
               <label style={labelStyle}>Phone Number</label>
+
               <input
                 style={inputStyle}
                 type="tel"
@@ -214,8 +279,13 @@ export default function EnquiryModal({ open, onClose }) {
 
             <div style={{ marginBottom: "18px" }}>
               <label style={labelStyle}>Your Enquiry *</label>
+
               <textarea
-                style={{ ...inputStyle, minHeight: "105px", resize: "vertical" }}
+                style={{
+                  ...inputStyle,
+                  minHeight: "105px",
+                  resize: "vertical",
+                }}
                 name="message"
                 value={form.message}
                 onChange={handleChange}
@@ -225,7 +295,9 @@ export default function EnquiryModal({ open, onClose }) {
             </div>
 
             {error && (
-              <p style={{ color: "#B42318", fontSize: "13px" }}>{error}</p>
+              <p style={{ color: "#B42318", fontSize: "13px" }}>
+                {error}
+              </p>
             )}
 
             <button
@@ -247,7 +319,8 @@ export default function EnquiryModal({ open, onClose }) {
                 gap: "9px",
               }}
             >
-              {loading ? "Sending..." : "Submit Enquiry"}
+              {loading ? "Connecting and sending..." : "Submit Enquiry"}
+
               {!loading && <Send size={16} />}
             </button>
           </form>
